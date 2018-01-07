@@ -321,8 +321,8 @@
             blacklists: {
                 NSFW: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/NSFWlist.json',
                 OP: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/OPlist.json',
-                BANNED: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/BANNEDlist.json'
-                BIEBER: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/BIEBERlist.json'
+                BANNED: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/BANNEDlist.json',
+                BIEBER: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/BIEBERlist.json',
             }
         },
         room: {
