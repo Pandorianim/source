@@ -259,8 +259,8 @@
         retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: 'basicBot',
-            language: 'english',
-            chatLink: 'https://rawgit.com/Pandorianim/source/master/lang/en.json',
+            language: 'polish',
+            chatLink: 'https://rawgit.com/Pandorianim/source/master/lang/pl.json',
             scriptLink: 'https://rawgit.com/Pandorianim/source/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
