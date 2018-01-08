@@ -248,7 +248,7 @@
         loggedInID: null,
         scriptLink: 'https://rawgit.com/Pandorianim/source/master/basicBot.js',
         cmdLink: 'http://git.io/245Ppg',
-        chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
+        chatLink: 'https://rawgit.com/Pandorianim/source/master/lang/pl.json',
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -312,7 +312,7 @@
             website: null,
             intervalMessages: [],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: '!',
             blacklists: {
                 NSFW: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/NSFWlist.json',
