@@ -288,13 +288,13 @@
             thorCooldown: 10,
             skipPosition: 3,
             skipReasons: [
-                ['theme', 'This song does not fit the room theme. '],
-                ['op', 'This song is on the OP list. '],
-                ['history', 'This song is in the history. '],
-                ['mix', 'You played a mix, which is against the rules. '],
-                ['sound', 'The song you played had bad sound quality or no sound. '],
-                ['nsfw', 'The song you contained was NSFW (image or sound). '],
-                ['unavailable', 'The song you played was not available for some users. ']
+                ['theme', 'Ta piosenka nie pasuje do tematu pokoju. '],
+                ['op', 'Ta piosenka jest na blackliscie OP. '],
+                ['history', 'Ta piosenka jest w historii. '],
+                ['mix', 'Pusciles mix, co jest wbrew zasadom. '],
+                ['sound', 'Ta piosenka ma kijowa jakosc, lub brak dzwieku '],
+                ['nsfw', 'Ta piosenka jest NSFW. '],
+                ['unavailable', 'Piosenka nie byla dostepna dla niektorych uzytkownikow. ']
             ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
@@ -315,9 +315,9 @@
             songstats: true,
             commandLiteral: '!',
             blacklists: {
-                NSFW: 'https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json',
-                OP: 'https://rawgit.com/basicBot/custom/master/blacklists/OPlist.json',
-                BANNED: 'https://rawgit.com/basicBot/custom/master/blacklists/BANNEDlist.json'
+                NSFW: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/NSFWlist.json',
+                OP: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/OPlist.json',
+                BANNED: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/BANNEDlist.json'
             }
         },
         room: {
