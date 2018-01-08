@@ -1,10 +1,7 @@
 /**
-
  Copyright © 2014-2017 basicBot
-
  Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
  This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.
-
  */
 
 (function() {
@@ -64,7 +61,6 @@
             $.getScript('https://cdn.jsdelivr.net/sockjs/1.0.3/sockjs.min.js', loadSocket);
         } else loadSocket();
     }
-
     var sendToSocket = function() {
         var basicBotSettings = basicBot.settings;
         var basicBotRoom = basicBot.room;
@@ -112,7 +108,7 @@
 
     var loadChat = function(cb) {
         if (!cb) cb = function() {};
-        $.get('https://rawgit.com/Pandorianim/source/master/lang/langIndex.json', function(json) {
+        $.get('https://rawgit.com/basicBot/source/master/lang/langIndex.json', function(json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -246,22 +242,22 @@
     var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
-        version: '2.11.2',
+        version: '2.11.3',
         status: false,
         name: 'basicBot',
         loggedInID: null,
-        scriptLink: 'https://rawgit.com/Pandorianim/source/master/basicBot.js',
+        scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
         cmdLink: 'http://git.io/245Ppg',
-        chatLink: 'https://rawgit.com/Pandorianim/source/master/lang/en.json',
+        chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: 'basicBot',
-            language: 'polish',
-            chatLink: 'https://rawgit.com/Pandorianim/source/master/lang/pl.json',
-            scriptLink: 'https://rawgit.com/Pandorianim/source/master/basicBot.js',
+            language: 'english',
+            chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
+            scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -319,10 +315,9 @@
             songstats: true,
             commandLiteral: '!',
             blacklists: {
-                NSFW: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/NSFWlist.json',
-                OP: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/OPlist.json',
-                BANNED: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/BANNEDlist.json',
-                BIEBER: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/BIEBERlist.json',
+                NSFW: 'https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json',
+                OP: 'https://rawgit.com/basicBot/custom/master/blacklists/OPlist.json',
+                BANNED: 'https://rawgit.com/basicBot/custom/master/blacklists/BANNEDlist.json'
             }
         },
         room: {
@@ -977,6 +972,7 @@
             }
         },
         eventDjadvance: function(obj) {
+            if (!obj.dj) return;
             if (basicBot.settings.autowoot) {
                 $('#woot').click(); // autowoot
             }
@@ -1115,6 +1111,8 @@
                 var remaining = obj.media.duration * 1000;
                 var startcid = API.getMedia().cid;
                 basicBot.room.autoskipTimer = setTimeout(function() {
+                    if (!API.getMedia()) return;
+
                     var endcid = API.getMedia().cid;
                     if (startcid === endcid) {
                         //API.sendChat('Song stuck, skipping...');
@@ -1547,7 +1545,6 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-
                     }
                 }
             },
@@ -2227,18 +2224,15 @@
                         for (var i = 0; i < chats.length; i++) {
                             var n = from[i].textContent;
                             if (name.trim() === n.trim()) {
-
                                 // var messagecid = $(message)[i].getAttribute('data-cid');
                                 // var emotecid = $(emote)[i].getAttribute('data-cid');
                                 // API.moderateDeleteChat(messagecid);
-
                                 // try {
                                 //     API.moderateDeleteChat(messagecid);
                                 // }
                                 // finally {
                                 //     API.moderateDeleteChat(emotecid);
                                 // }
-
                                 if (typeof $(message)[i].getAttribute('data-cid') == 'undefined'){
                                     API.moderateDeleteChat($(emote)[i].getAttribute('data-cid')); // works well with normal messages but not with emotes due to emotes and messages are seperate.
                                 } else {
