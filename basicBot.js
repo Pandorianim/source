@@ -239,7 +239,7 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
-    var botCreatorIDs = [3851534, 4105209];
+    var botCreatorIDs = [3851534, 4105209,31730421]; //added myself for some nice !thor chance XD
 
     var basicBot = {
         version: '2.11.3',
@@ -295,6 +295,9 @@
                 ['sound', 'Ta piosenka ma kijową jakość, lub brak dźwięku. '],
                 ['nsfw', 'Ta piosenka jest NSFW. '],
                 ['unavailable', 'Piosenka nie była dostępna dla niektórych użytkowników. ']
+                ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie piosenek!. ']
+                ['rak', 'Ta piosenka to rak, ciesz się, że nie dałam jej na blacklistę. ']
+                ['lis', 'Lis wypierniczaj z tym szajsem, moje uszy krawawią!. ']
             ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
@@ -3680,7 +3683,7 @@
                                 thorCd = false,
                                 timeInMinutes = 0,
                                 worthyAlg = Math.floor(Math.random() * 10) + 1,
-                                worthy = worthyAlg == 10 ? true : false;
+                                worthy = worthyAlg == 9 ? true : false;
 
                             // sly benzi 👀
                             if (botCreatorIDs.indexOf(id) > -1) {
