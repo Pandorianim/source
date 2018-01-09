@@ -200,7 +200,7 @@
     "swapping": "\/me Zamieniam %%NAME1%% z %%NAME2%%.",
     "genres": "/me Lista dozwolonych gatunków w społeczności: %%LINK%%",
     "notbanned": "\/me [@%%NAME%%] U\u017cytkownik nie by\u0142 zbanowany.",
-    "unmutedeveryone": "/me [@%%NAME%%] Wyłączył wysieczenie wszystkim użytkownikom. Bójcie się, albowiem go wkurzyliście.",
+    "unmutedeveryone": "/me [@%%NAME%%] Wyłączył wysieczenie wszystkim użytkownikom. Powinniście mu podziękować.",
     "unmuteeveryonerank": "/me [@%%NAME%%] Tylko menedżerowie wzwyż mogą wyłączyć wyciszenie wszystkim użytkownikom.",
     "notmuted": "/me [@%%NAME%%] ten użytkownik nie był wyciszony.",
     "unmuterank": "/me [@%%NAME%%] Nie możesz wyłączyć wyciszenia użytkownikowi z taką samą lub wyższą rangą niż twoja.",
