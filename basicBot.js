@@ -294,9 +294,9 @@
                 ['rules', 'Puściłeś piosenkę, która jest wbrew regulaminowi. '],
                 ['sound', 'Ta piosenka ma kijową jakość, lub brak dźwięku. '],
                 ['nsfw', 'Ta piosenka jest NSFW. '],
-                ['unavailable', 'Piosenka nie była dostępna dla niektórych użytkowników. ']
-                ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie piosenek!. ']
-                ['rak', 'Ta piosenka to rak, ciesz się, że nie dałam jej na blacklistę. ']
+                ['unavailable', 'Piosenka nie była dostępna dla niektórych użytkowników. '],
+                ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie piosenek! '],
+                ['rak', 'Ta piosenka to rak, ciesz się, że nie dałam jej na blacklistę. '],
                 ['lis', 'Lis wypierniczaj z tym szajsem, moje uszy krawawią!. ']
             ],
             afkpositionCheck: 15,
