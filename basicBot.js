@@ -1188,9 +1188,29 @@
                 }));
                 return true;
             }
+            if (msg === 'jd') {
+                API.sendChat(subChat(basicBot.chat.askjd, {
+                    name: chat.un
+                }));
+                return true;
+            }
+            if (msg === 'monika.chr') {
+                API.sendChat(subChat(basicBot.chat.askmonikachr, {
+                    name: chat.un
+                }));
+                return true;
+            }
             for (var j = 0; j < basicBot.chatUtilities.spam.length; j++) {
                 if (msg === basicBot.chatUtilities.spam[j]) {
                     API.sendChat(subChat(basicBot.chat.spam, {
+                        name: chat.un
+                    }));
+                    return true;
+                }
+            }
+            for (var j = 0; j < basicBot.chatUtilities.swear.length; j++) {
+                if (msg === basicBot.chatUtilities.swear[j]) {
+                    API.sendChat(subChat(basicBot.chat.swear, {
                         name: chat.un
                     }));
                     return true;
@@ -1340,7 +1360,7 @@
                 'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
-            curses: [
+            swear: [
                 'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
             ]
         },
