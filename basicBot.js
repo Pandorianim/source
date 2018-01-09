@@ -289,14 +289,14 @@
             skipPosition: 2,
             skipReasons: [
                 ['theme', 'Ta piosenka nie pasuje do tematu pokoju. '],
-                ['op', 'Ta piosenka jest na blackliscie OP. '],
+                ['rak', 'Ta piosenka to rak, ciesz się, że nie dałam jej na blacklistę. '],
                 ['history', 'Ta piosenka jest w historii, czy chcesz nas zanudzić? '],
                 ['rules', 'Puściłeś piosenkę, która jest wbrew regulaminowi. '],
                 ['sound', 'Ta piosenka ma kijową jakość, lub brak dźwięku. '],
                 ['nsfw', 'Ta piosenka jest NSFW. '],
                 ['unavailable', 'Piosenka nie była dostępna dla niektórych użytkowników. '],
                 ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie piosenek! '],
-                ['rak', 'Ta piosenka to rak, ciesz się, że nie dałam jej na blacklistę. '],
+                ['op', 'Ta piosenka jest za często puszczana, proszę przestać, bo nie mogę jej już '],
                 ['lis', 'Lis wypierniczaj z tym szajsem, moje uszy krawawią!. ']
             ],
             afkpositionCheck: 15,
