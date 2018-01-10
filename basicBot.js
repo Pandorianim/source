@@ -1185,7 +1185,7 @@
                 return true;
             }
             msg = msg.toLowerCase();
-            if (msg === 'skip') {
+            if (msg === '\b(s+(\W|\d|_)*k+(\W|\d|_)*i+(\W|\d|_)*p+(\W|\d|_)*)') {
                 API.sendChat(subChat(basicBot.chat.askskip, {
                     name: chat.un
                 }));
