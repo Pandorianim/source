@@ -1210,7 +1210,7 @@
                     }));
                     return true;
                 }
-            }
+            };
             var words[] = msg.split(' ');
             for (var k = 0; k < words.length; k++) {
             for (var j = 0; j < basicBot.chatUtilities.swear.length; j++) {
