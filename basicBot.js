@@ -1162,7 +1162,7 @@
             if (!basicBot.settings.filterChat) return false;
             if (basicBot.userUtilities.getPermission(chat.uid) >= API.ROLE.BOUNCER) return false;
             var msg = chat.message;
-            var words[] = msg.split(' ');
+            var words = msg.split(' ');
             var containsLetters = false;
             for (var i = 0; i < msg.length; i++) {
                 ch = msg.charAt(i);
