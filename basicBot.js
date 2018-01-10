@@ -1214,7 +1214,7 @@
             }
             for (var k = 0; k < words.length; k++) {
             for (var j = 0; j < basicBot.chatUtilities.swear.length; j++) {
-                if (msg === basicBot.chatUtilities.swear[j]) {
+                if (words[k] === basicBot.chatUtilities.swear[j]) {
                     API.sendChat(subChat(basicBot.chat.swear, {
                         name: chat.un
                     }));
