@@ -1162,6 +1162,7 @@
             if (!basicBot.settings.filterChat) return false;
             if (basicBot.userUtilities.getPermission(chat.uid) >= API.ROLE.BOUNCER) return false;
             var msg = chat.message;
+            var words[] = msg.split(' ');
             var containsLetters = false;
             for (var i = 0; i < msg.length; i++) {
                 ch = msg.charAt(i);
@@ -1210,8 +1211,7 @@
                     }));
                     return true;
                 }
-            };
-            var words[] = msg.split(' ');
+            }
             for (var k = 0; k < words.length; k++) {
             for (var j = 0; j < basicBot.chatUtilities.swear.length; j++) {
                 if (msg === basicBot.chatUtilities.swear[j]) {
