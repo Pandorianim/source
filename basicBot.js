@@ -1211,6 +1211,8 @@
                     return true;
                 }
             }
+            var words[] = msg.split(' ');
+            for (var k = 0; k < words.length; k++) {
             for (var j = 0; j < basicBot.chatUtilities.swear.length; j++) {
                 if (msg === basicBot.chatUtilities.swear[j]) {
                     API.sendChat(subChat(basicBot.chat.swear, {
@@ -1218,6 +1220,7 @@
                     }));
                     return true;
                 }
+            }
             }
             return false;
         },
@@ -1364,7 +1367,7 @@
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             swear: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
+                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka', 'kurwa', 'chuj', 'dupa'
             ]
         },
         connectAPI: function() {
