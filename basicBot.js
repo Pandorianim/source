@@ -288,16 +288,15 @@
             thorCooldown: 10,
             skipPosition: 2,
             skipReasons: [
-                ['theme', 'Ta piosenka nie pasuje do tematu pokoju. '],
+                ['rules', 'Ta piosenka łamie zasady panujące w tym pokoju! '],
+                ['op', 'Ta piosenka jest za często puszczana, rzygam już nią. '],
+                ['history', 'Ta piosenka niedawno była puszczana, nie puszczaj różnych wersjie tego samego! '],
+                ['sound', 'Ta piosenka miała kijową jakość dźwięku/obrazu. '],
+                ['nsfw', 'Ta piosenka jest NSFW(słowa lub grafika). '],
+                ['unavailable', 'Twoja piosenka nie była dostępna dla niektórych użytkowników. '],
                 ['rak', 'Ta piosenka to rak, ciesz się, że nie dałam jej na blacklistę. '],
-                ['history', 'Ta piosenka jest w historii, czy chcesz nas zanudzić? '],
-                ['rules', 'Puściłeś piosenkę, która jest wbrew regulaminowi. '],
-                ['sound', 'Ta piosenka ma kijową jakość, lub brak dźwięku. '],
-                ['nsfw', 'Ta piosenka jest NSFW. '],
-                ['unavailable', 'Piosenka nie była dostępna dla niektórych użytkowników. '],
-                ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie piosenek! '],
-                ['op', 'Ta piosenka jest za często puszczana, proszę przestać, bo nie mogę jej już '],
-                ['lis', 'Lis wypierniczaj z tym szajsem, moje uszy krawawią!. ']
+                ['lis', 'Lis, dzbanie przestaj ranić moje uszy tym szajsem. '],
+                ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie muzyki! ']
             ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
@@ -1186,11 +1185,13 @@
                 return true;
             }
             msg = msg.toLowerCase();
-            if (msg === '\b(s+(\W|\d|_)*k+(\W|\d|_)*i+(\W|\d|_)*p+(\W|\d|_)*)') {
+            for (var k = 0; k < words.length; k++) {
+            if (words[k] === 'skip') {
                 API.sendChat(subChat(basicBot.chat.askskip, {
                     name: chat.un
                 }));
-                return true;
+                return false;
+            }
             }
             if (msg === 'jd') {
                 API.sendChat(subChat(basicBot.chat.askjd, {
