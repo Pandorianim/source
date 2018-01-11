@@ -1186,24 +1186,14 @@
             }
             msg = msg.toLowerCase();
             for (var k = 0; k < words.length; k++) {
-            if (words[k] === 'skip') {
-                API.sendChat(subChat(basicBot.chat.askskip, {
-                    name: chat.un
-                }));
-                return false;
+            for (var j = 0; j < basicBot.chatUtilities.swear.length; j++) {
+                if (words[k] === basicBot.chatUtilities.swear[j]) {
+                    API.sendChat(subChat(basicBot.chat.swear, {
+                        name: chat.un
+                    }));
+                    return true;
+                }
             }
-            }
-            if (msg === 'jd') {
-                API.sendChat(subChat(basicBot.chat.askjd, {
-                    name: chat.un
-                }));
-                return true;
-            }
-            if (msg === 'monika.chr') {
-                API.sendChat(subChat(basicBot.chat.askmonikachr, {
-                    name: chat.un
-                }));
-                return true;
             }
             for (var j = 0; j < basicBot.chatUtilities.spam.length; j++) {
                 if (msg === basicBot.chatUtilities.spam[j]) {
@@ -1214,14 +1204,26 @@
                 }
             }
             for (var k = 0; k < words.length; k++) {
-            for (var j = 0; j < basicBot.chatUtilities.swear.length; j++) {
-                if (words[k] === basicBot.chatUtilities.swear[j]) {
-                    API.sendChat(subChat(basicBot.chat.swear, {
-                        name: chat.un
-                    }));
-                    return true;
-                }
+            if (words[k] === 'jd') {
+                API.sendChat(subChat(basicBot.chat.askjd, {
+                    name: chat.un
+                }));
+                return true;
             }
+            }
+            for (var k = 0; k < words.length; k++) {
+            if (words[k] === 'skip') {
+                API.sendChat(subChat(basicBot.chat.askskip, {
+                    name: chat.un
+                }));
+                return false;
+            }
+            }
+            if (msg === 'monika.chr') {
+                API.sendChat(subChat(basicBot.chat.askmonikachr, {
+                    name: chat.un
+                }));
+                return true;
             }
             return false;
         },
@@ -1368,7 +1370,7 @@
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             swear: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka', 'kurwa', 'chuj', 'dupa'
+                'kurwa', 'chuj', 'dupa', 'huj', 'kurwo', 'chuju', 'dupo', 'dupe', 'huju', 'kurwe', 'pedał', 'pedale', 'jebany', 'jebana'
             ]
         },
         connectAPI: function() {
