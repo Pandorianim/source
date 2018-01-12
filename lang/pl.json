@@ -109,7 +109,7 @@
     "invalidgifrandom": "\/me [@%%NAME%%] B\u0142\u0119dne zapytanie, spr\u00f3buj ponownie.",
     "invalidtime": "/me [@%%NAME%%] Błędnie podany czas.",
     "nouserspecified": "\/me [@%%NAME%%] Nie wybrano u\u017cytkownika.",
-    "invaliduserspecified": "\/me [@%%NAME%%] Nieprawid\u0142owy u\u017cytkownik.",
+    "invaliduserspecified": "\/me Użytkownik gdzieś się schował. Chyba się bawi w chowanego.",
     "nolistspecified": "\/me [@%%NAME%%]  Nie wybrano listy.",
     "invalidlistspecified": "\/me [@%%NAME%%] Wybrano nieprawid\u0142ow\u0105 list\u0119.",
     "novaliduserspecified": "\/me [@%%NAME%%] Nie wybrano prawid\u0142owego u\u017cytkownika.",
