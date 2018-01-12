@@ -3226,7 +3226,8 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        API.sendChat(basicBot.chat.advices[1])
+                        var randomSaying = Math.floor(Math.random() * basicBot.chat.advices.length);
+                        API.sendChat(basicBot.chat.advices[randomSaying])
                     }
                 }
             },
