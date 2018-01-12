@@ -3217,7 +3217,6 @@
                     }
                 }
             },
-         
             adviceCommand: {
                 command: 'advice',
                 rank: 'user',
@@ -3231,7 +3230,6 @@
                     }
                 }
             },
-
             refreshCommand: {
                 command: 'refresh',
                 rank: 'manager',
