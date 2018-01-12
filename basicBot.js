@@ -239,7 +239,7 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
-    var botCreatorIDsf = [3851534, 4105209,31730421]; //added myself for some nice !thor chance XD
+    var botCreatorIDs = [3851534, 4105209,31730421]; //added myself for some nice !thor chance XD
 
     var basicBot = {
         version: '2.11.3',
