@@ -194,7 +194,7 @@
     "muterank": "/me [@%%NAME%%] Nie możesz wyciszyć osoby z taką samą lub wyższą rangą od Ciebie.",
     "oplist": "\/me Lista OP: %%LINK%%",
     "pong": "\/me Pong!",
-    "reload": "\/me Zaraz wracam.",
+    "reload": "\/me Znikam na chwilkę, by zaktualizować kod. Nie martwcie się, zaraz wracam :*",
     "removenotinwl": "\/me [@%%NAME%%] Wybrany u\u017cytkownik @%%USERNAME%% nie jest na li\u015bcie oczekiwania.",
     "roomrules": "/me Regulamin społeczności: %%LINK%%",
     "sessionstats": "\/me [@%%NAME%%] Wszystkie wooty: %%WOOTS%%, wszystkie mehy: %%MEHS%%, wszystkie graby: %%GRABS%%.",
