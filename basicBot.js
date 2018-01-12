@@ -3240,9 +3240,12 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        name: chat.un,
+                        name: chat.un;
                         var randomAdvice = Math.floor(Math.random() * basicBot.chat.advices.length);
-                        API.sendChat(basicBot.chat.advices[randomAdvice])
+                        API.sendChat(subChat(basicBot.chat.advice, {
+                            name: chat.un,
+                            response: basicBot.chat.advice[randomAdvice]
+                        }));
                     }
                 }
             },
