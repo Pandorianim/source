@@ -289,7 +289,7 @@
             skipPosition: 2,
             skipReasons: [
                 ['rules', 'Ta piosenka łamie zasady panujące w tym pokoju! '],
-                ['op', 'Ta piosenka jest za często puszczana, rzygam już nią. '],
+                ['op', 'Ta piosenka jest za często puszczana, rzygam już nią. Proszę przestać. '],
                 ['history', 'Ta piosenka niedawno była puszczana, nie puszczaj różnych wersjie tego samego! '],
                 ['sound', 'Ta piosenka miała kijową jakość dźwięku/obrazu. '],
                 ['nsfw', 'Ta piosenka jest NSFW(słowa lub grafika). '],
