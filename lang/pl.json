@@ -21,12 +21,19 @@
         "daje Ci stare, zgniłe ciastko, które zostało zabrane z deszczu.",
         "piecze dla Ciebie \u015bwie\u017ce ciastka, pachn\u0105 niesamowicie."
     ],
-    "advices": [
+    "sayings": [
         "Lepiej być znanym pijakiem, niż anonimowym alkoholikiem.",
         "Kto pod kim dołki kopie-szybko awansuje.",
         "Czym chata bogata-tym goście rzygają.",
         "Ten się śmieje ostatni, co najwolniej kojarzy.",
         "Żeby życie miało smaczek, raz dziewczynka, raz chłopaczek."
+    ],
+    "advices": [
+        "/me @%%NAME%%, jeśli nie udaje ci się za pierwszym razem, to spadochroniarstwo nie jest sportem dla Ciebie.",
+        "/me @%%NAME%% nie bądź niezastąpionym. Jeśli nie można Cię zastąpić, nigdy nie dostaniesz awansu.",
+        "/me @%%NAME%% jeśli nie lubisz ogórków, to jedz bakłażany.",
+        "/me @%%NAME%%, jeśli obawiasz się, że nikt nie dba o to, czy jeszcze żyjesz, przestań płacić rachunki za prąd.",
+        "/me @%%NAME%% nigdy nie sprawdzaj głębokości wody obiema nogami na raz."
     ],
     "balls": [
         "Znaki wskazuj\u0105 na tak.",
@@ -58,7 +65,7 @@
         "Dzwonię po policję!",
         "Mo\u017cliwe.",
         "\u017bartujesz sobie?",
-        "Pytałeś o coś? Przepraszam, ale nic nie słyszałam.",
+        "Pytałeś o coś? Przepraszam, ale nie słyszałam.",
         "Daj całusa, a poznasz odpowiedź.",
         "Jak śmiesz zadawać tak głupie pytanie?",
         "Tak, aczkolwiek nie.",
