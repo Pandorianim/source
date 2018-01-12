@@ -29,12 +29,13 @@
         "Żeby życie miało smaczek, raz dziewczynka, raz chłopaczek."
     ],
     "advices": [
-        "/me @%%NAME%%, jeśli nie udaje ci się za pierwszym razem, to spadochroniarstwo nie jest sportem dla Ciebie.",
-        "/me @%%NAME%% nie bądź niezastąpionym. Jeśli nie można Cię zastąpić, nigdy nie dostaniesz awansu.",
-        "/me @%%NAME%% jeśli nie lubisz ogórków, to jedz bakłażany.",
-        "/me @%%NAME%%, jeśli obawiasz się, że nikt nie dba o to, czy jeszcze żyjesz, przestań płacić rachunki za prąd.",
-        "/me @%%NAME%% nigdy nie sprawdzaj głębokości wody obiema nogami na raz."
+        "jeśli nie udaje ci się za pierwszym razem, to spadochroniarstwo nie jest sportem dla Ciebie.",
+        "nie bądź niezastąpionym. Jeśli nie można Cię zastąpić, nigdy nie dostaniesz awansu.",
+        "jeśli nie lubisz ogórków, to jedz bakłażany.",
+        "jeśli obawiasz się, że nikt nie dba o to, czy jeszcze żyjesz, przestań płacić rachunki za prąd.",
+        "nigdy nie sprawdzaj głębokości wody obiema nogami na raz."
     ],
+    "advice": "@%%NAME%% %%RESPONSE%",
     "balls": [
         "Znaki wskazuj\u0105 na tak.",
         "Tak.",
