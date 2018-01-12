@@ -239,7 +239,7 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
-    var botCreatorIDs = [3851534, 4105209,31730421]; //added myself for some nice !thor chance XD
+    var botCreatorIDsf = [3851534, 4105209,31730421]; //added myself for some nice !thor chance XD
 
     var basicBot = {
         version: '2.11.3',
@@ -904,7 +904,7 @@
 
             if (botCreatorIDs.indexOf(user.id) > -1) {
               console.log(true);
-                API.sendChat('@'+user.username+' '+':sparkles: :bow: :sparkles:');
+                API.sendChat('@'+user.username+' '+'Witaj Creator-sama, twa wola jest dla mnie rozkazem :bow:');
             } else if (basicBot.settings.welcome && greet) {
               console.log(false);
               console.log(botCreatorIDs);
