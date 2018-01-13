@@ -1370,7 +1370,7 @@
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             swear: [
-                'kurwa', 'chuj', 'dupa', 'huj', 'kurwo', 'chuju', 'dupo', 'dupe', 'huju', 'kurwe', 'pedał', 'pedale', 'jebany', 'jebana'
+                'kurwa', 'chuj', 'dupa', 'huj', 'kurwo', 'chuju', 'dupo', 'dupe', 'huju', 'kurwe', 'pedał', 'pedale', 'jebany', 'jebana', 'kurfa', 'jebać'
             ]
         },
         connectAPI: function() {
