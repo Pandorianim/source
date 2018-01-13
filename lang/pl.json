@@ -35,7 +35,7 @@
         "jeśli obawiasz się, że nikt nie dba o to, czy jeszcze żyjesz, przestań płacić rachunki za prąd.",
         "nigdy nie sprawdzaj głębokości wody obiema nogami na raz."
     ],
-    "advice": "@%%NAME%% %%RESPONSE%",
+    "advice": "@%%NAME%% %%RESPONSE%%",
     "balls": [
         "Znaki wskazuj\u0105 na tak.",
         "Tak.",
@@ -46,9 +46,8 @@
         "Nie będę odpowiadać na pytania osoby o tak niskim ilorazie inteligencji!",
         "Pomy\u015bl i zapytaj ponownie.",
         "Niestety ptysiu.",
-        "Zdecydowanie tak.",
+        "Bez wątpienia.",
         "Lepiej Ci teraz tego nie mówić.",
-        "Bardzo w\u0105tpliwe.",
         "Tak, definitywnie.",
         "Na to pytanie odpowie ci Buffsuki.",
         "Nie można tego teraz przewidzieć.",
