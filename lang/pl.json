@@ -26,6 +26,9 @@
         "Kto pod kim dołki kopie-szybko awansuje.",
         "Czym chata bogata-tym goście rzygają.",
         "Ten się śmieje ostatni, co najwolniej kojarzy.",
+        "Gdy dasz człowiekowi rybę, natychmiast ją zje. Gdy go nauczysz łowić, będzie siedział cały dzień w łódce i pił.",
+        "Są dni, gdy jesteś owadem. Są też dni, gdy jesteś przednią szybą samochodu.",
+        "Doświadczenie to coś, czego nie dostaniesz do czasu, kiedy przestaniesz tego potrzebować.",
         "Żeby życie miało smaczek, raz dziewczynka, raz chłopaczek."
     ],
     "advices": [
@@ -33,6 +36,10 @@
         "nie bądź niezastąpionym. Jeśli nie można Cię zastąpić, nigdy nie dostaniesz awansu.",
         "jeśli nie lubisz ogórków, to jedz bakłażany.",
         "jeśli obawiasz się, że nikt nie dba o to, czy jeszcze żyjesz, przestań płacić rachunki za prąd.",
+        "jeśli chcesz ukraść gazetę ze skrzynki pocztowej sąsiada, zrób to przed świtem( wtedy jest najciemniej ;) )",
+        "jeśli pożyczysz komuś 50 złotych i nigdy więcej go nie zobaczysz, to najprawdopodobniej będzie to mądra inwestycja.",
+        "każdy wydaje się normalny przed bliższym poznaniem.",
+        "generalnie mówiąc, niewiele uczysz się, gdy ruszasz ustami.",
         "nigdy nie sprawdzaj głębokości wody obiema nogami na raz."
     ],
     "advice": "@%%NAME%% %%RESPONSE%%",
