@@ -242,7 +242,7 @@
     var botCreatorIDs = [3851534, 4105209,31730421]; //added myself for some nice !thor chance XD
 
     var basicBot = {
-        version: '2.11.3',
+        version: '6.9',
         status: false,
         name: 'basicBot',
         loggedInID: null,
@@ -288,15 +288,13 @@
             thorCooldown: 10,
             skipPosition: 2,
             skipReasons: [
-                ['rules', 'Ta piosenka łamie zasady panujące w tym pokoju! '],
-                ['op', 'Ta piosenka jest za często puszczana, rzygam już nią. Proszę przestać. '],
-                ['history', 'Ta piosenka niedawno była puszczana, nie puszczaj różnych wersjie tego samego! '],
-                ['sound', 'Ta piosenka miała kijową jakość dźwięku/obrazu. '],
-                ['nsfw', 'Ta piosenka jest NSFW(słowa lub grafika). '],
-                ['unavailable', 'Twoja piosenka nie była dostępna dla niektórych użytkowników. '],
-                ['rak', 'Ta piosenka to rak, ciesz się, że nie dałam jej na blacklistę. '],
-                ['lis', 'Lis, dzbanie przestaj ranić moje uszy tym szajsem. '],
-                ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie muzyki! ']
+                ['theme', 'This song does not fit the room theme. '],
+                ['op', 'This song is on the OP list. '],
+                ['history', 'This song is in the history. '],
+                ['mix', 'You played a mix, which is against the rules. '],
+                ['sound', 'The song you played had bad sound quality or no sound. '],
+                ['nsfw', 'The song you contained was NSFW (image or sound). '],
+                ['unavailable', 'The song you played was not available for some users. ']
             ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
@@ -586,7 +584,8 @@
                         rankInt = 7;
                         break;
                     case 'host':
-                        rankInt = 5;
+                        rankInt = 5
+                  ;
                         break;
                     case 'cohost':
                         rankInt = 4;
@@ -1253,7 +1252,6 @@
                 if (basicBot.settings.cmdDeletion && msg.startsWith(basicBot.settings.commandLiteral)) {
                     API.moderateDeleteChat(chat.cid);
                 }
-                /**
                  var plugRoomLinkPatt = /(\bhttps?:\/\/(www.)?plug\.dj[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
                  if (plugRoomLinkPatt.exec(msg)) {
                     if (perm === API.ROLE.NONE) {
@@ -1262,7 +1260,6 @@
                         return true;
                     }
                 }
-                 **/
                 if (msg.indexOf('http://adf.ly/') > -1) {
                     API.moderateDeleteChat(chat.cid);
                     API.sendChat(subChat(basicBot.chat.adfly, {
