@@ -294,8 +294,8 @@
                 ['rak', 'Ta piosenka to czysty rak, przez Ciebie trafię na onkologię :( '],
                 ['sound', 'Ta piosenka ma kijową jakość dźwięku/obrazu, proszę nie krzywdź naszych zmysłów estetycznych. '],
                 ['nsfw', 'Ta piosenka jest NSFW! Czy próbujesz zbanować nasze community? '],
-                ['unavailable', 'Ta piosenka ma blokadę regionalną, przez co nie wszyscy mogli się nią cieszyć :( ']
-                ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie muzyki, spytaj się o zgodę zanim coś puścisz. ']
+                ['unavailable', 'Ta piosenka ma blokadę regionalną, przez co nie wszyscy mogli się nią cieszyć :( '],
+                ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie muzyki, spytaj się o zgodę zanim coś puścisz. '],
                 ['lis', 'Lis przestań puszczać ten szajs!@! Uszy mi zaraz odpadną. ']
             ],
             afkpositionCheck: 15,
