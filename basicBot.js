@@ -288,13 +288,15 @@
             thorCooldown: 10,
             skipPosition: 2,
             skipReasons: [
-                ['theme', 'This song does not fit the room theme. '],
-                ['op', 'This song is on the OP list. '],
-                ['history', 'This song is in the history. '],
-                ['mix', 'You played a mix, which is against the rules. '],
-                ['sound', 'The song you played had bad sound quality or no sound. '],
-                ['nsfw', 'The song you contained was NSFW (image or sound). '],
-                ['unavailable', 'The song you played was not available for some users. ']
+                ['theme', 'Ta piosenka nie pasuje do tematu pokoju, sprawdź !theme jeśli chcesz wiedzieć więcej. '],
+                ['op', 'Ta piosenka jest puszczana tak często, że już nią rzygam. '],
+                ['history', 'Inna wersja tej piosenki była niedawno puszczana. Czy to jest sabotaż? '],
+                ['rak', 'Ta piosenka to czysty rak, przez Ciebie trafię na onkologię :( '],
+                ['sound', 'Ta piosenka ma kijową jakość dźwięku/obrazu, proszę nie krzywdź naszych zmysłów estetycznych. '],
+                ['nsfw', 'Ta piosenka jest NSFW! Czy próbujesz zbanować nasze community? '],
+                ['unavailable', 'Ta piosenka ma blokadę regionalną, przez co nie wszyscy mogli się nią cieszyć :( ']
+                ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie muzyki, spytaj się o zgodę zanim coś puścisz. ']
+                ['lis', 'Lis przestań puszczać ten szajs!@! Uszy mi zaraz odpadną. ']
             ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
