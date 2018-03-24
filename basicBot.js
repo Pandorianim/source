@@ -244,7 +244,7 @@
     var basicBot = {
         version: '6.9',
         status: false,
-        name: 'basicBot',
+        name: 'JustMonika',
         loggedInID: null,
         scriptLink: 'https://rawgit.com/Pandorianim/source/master/basicBot.js',
         cmdLink: 'http://git.io/245Ppg',
