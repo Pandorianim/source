@@ -3,7 +3,7 @@
  Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
  This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.
  */
-{
+
 (function() {
 
     /*window.onerror = function() {
@@ -270,16 +270,16 @@
             afkRemoval: false,
             maximumDc: 60,
             bouncerPlus: true,
-            blacklistEnabled: false,
+            blacklistEnabled: true,
             lockdownEnabled: false,
             lockGuard: false,
             maximumLocktime: 10,
-            cycleGuard: false,
+            cycleGuard: true,
             maximumCycletime: 10,
-            voteSkip: false,
+            voteSkip: true,
             voteSkipLimit: 4,
-            historySkip: false,
-            timeGuard: false,
+            historySkip: true,
+            timeGuard: true,
             maximumSongLength: 15,
             autodisable: false,
             commandCooldown: 15,
@@ -301,7 +301,7 @@
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
             motdEnabled: true,
-            motdInterval: 18,
+            motdInterval: 14,
             motd: 'To nie tak, że mnie obchodzi, czy się dobrze bawicie, ale mam nadzieję, że tak. Pamiętajcie, że wszelkie pytania możecie kierować do Stuffa!',
             filterChat: true,
             etaRestriction: false,
@@ -315,7 +315,7 @@
             intervalMessages: [],
             messageInterval: 5,
             songstats: false,
-            commandLiteral: '$',
+            commandLiteral: '!',
             blacklists: {
                 NSFW: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/NSFWlist.json',
                 OP: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/OPlist.json',
