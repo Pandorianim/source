@@ -315,7 +315,7 @@
             intervalMessages: [],
             messageInterval: 5,
             songstats: false,
-            commandLiteral: '!',
+            commandLiteral: '$',
             blacklists: {
                 NSFW: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/NSFWlist.json',
                 OP: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/OPlist.json',
