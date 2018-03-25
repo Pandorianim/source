@@ -274,12 +274,12 @@
             lockdownEnabled: false,
             lockGuard: false,
             maximumLocktime: 10,
-            cycleGuard: false,
+            cycleGuard: true,
             maximumCycletime: 10,
-            voteSkip: false,
-            voteSkipLimit: 4,
-            historySkip: false,
-            timeGuard: false,
+            voteSkip: true,
+            voteSkipLimit: 5,
+            historySkip: true,
+            timeGuard: true,
             maximumSongLength: 15,
             autodisable: false,
             commandCooldown: 15,
@@ -912,12 +912,14 @@
                 welcomeback ?
                     setTimeout(function(user) {
                         API.sendChat(subChat(basicBot.chat.welcomeback, {
-                            name: user.username
+                            name: user.username,
+                            name2: user.username
                         }));
                     }, 1 * 1000, user) :
                     setTimeout(function(user) {
                         API.sendChat(subChat(basicBot.chat.welcome, {
-                            name: user.username
+                            name: user.username,
+                            name2: user.username
                         }));
                     }, 1 * 1000, user);
             }
