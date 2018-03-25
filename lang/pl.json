@@ -97,6 +97,7 @@
     "isopen": "/me Ruletka włączona! Wpisz !join aby dołączyć! (Wylosowana osoba zostanie przeniesiona na losowe miejsce w kolejce)",
     "winnerpicked": "\/me Zwyci\u0119zca zosta\u0142 wybrany! @%%NAME%% przeniesiony na pozycj\u0119 %%POSITION%%.",
     "ball": "/me %%NAME%% zapytał: \"%%QUESTION%%\", odpowiedzią %%BOTNAME%% jest: \"%%RESPONSE%%\"",
+    "say": "/me %%TEKST%%",
     "notghosting": "[%%NAME1%%] %%NAME2%% nie ghostuje.",
     "ghosting": "[%%NAME1%%] %%NAME2%% albo ghostuje, albo nie jest dostępny w społeczności.",
     "alreadyadding": "/me Użytkownik jest już dodawany! Zmieniono pożądaną pozycję na: %%POSITION%%.",
