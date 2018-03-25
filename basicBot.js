@@ -1881,7 +1881,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        var argument = chat.substring(cmd.length + 1).replace(/@/g, '');
+                        var argument = chat.message.substring(cmd.length + 1).replace(/@/g, '');
                         API.sendChat(argument);
                     }
                 }
