@@ -1883,7 +1883,7 @@
                     else {
                         var argument = msg.substring(cmd.length + 1).replace(/@/g, '');
                         API.sendChat(subChat(basicBot.chat.say, {
-                            question: argument,
+                            tekst: argument,
                         }));
                     }
                 }
