@@ -239,8 +239,8 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
-    var botCreatorIDs = [3851534, 4105209,31730421];
-    var MisticID = [28366137];
+    var botCreatorIDs = [3851534, 4105209,31730421]; //added myself for some nice !thor chance XD
+    var MistiID = [28366137]; //added myself for some nice !thor chance XD
  
     var basicBot = {
         version: '6.9',
@@ -907,13 +907,13 @@
             if (botCreatorIDs.indexOf(user.id) > -1) {
               console.log(true);
                 API.sendChat('@'+user.username+' '+'Witaj Creator-sama, twa wola jest dla mnie rozkazem :bow:');
-            if (MisticID.indexOf(user.id) > -1) {
+            } else if (MistiID.indexOf(user.id) > -1) {
               console.log(true);
                 API.sendChat('@'+user.username+' '+'Witaj zapluty menelu, noszący tytuł prezydenta Konowicza!');
             } else if (basicBot.settings.welcome && greet) {
               console.log(false);
               console.log(botCreatorIDs);
-              console.log(MisticID);
+              console.log(MistiID);
                 welcomeback ?
                     setTimeout(function(user) {
                         API.sendChat(subChat(basicBot.chat.welcomeback, {
