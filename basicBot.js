@@ -1875,7 +1875,7 @@
 
             sayCommand: {
                 command: 'say',
-                rank: 'menager',
+                rank: 'mod',
                 type: 'startsWith',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
