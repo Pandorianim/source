@@ -192,7 +192,7 @@
     "rouletteleave": "/me @%%NAME%% opuścił ruletkę.",
     "songlink": "\/me [@%%NAME%%] Link do aktualnej piosenki: %%LINK%%",
     "usedlockskip": "/me [%%NAME%% użył lockskip'a]",
-    "usedskip": "\/me [%%NAME%% pominął twoją piosenkę, proszę nie ruchaj jego matki ;)]",
+    "usedskip": "\/me [%%NAME%% pominął twoją piosenkę, bo stwierdził, że Monika nie lubi takich klimatów.]",
     "skippos": "/me [@%%NAME%%] DJ-e będą teraz po pominięciu przesuwani na pozycję %%POSITION%%.",
     "lockguardtime": "/me [@%%NAME%%] Strażnik blokady jest ustawiony %%TIME%% minut.",
     "maxlengthtime": "\/me [@%%NAME%%] Maksymalny czas trawania utworu ustawiony na %%TIME%% minut.",
