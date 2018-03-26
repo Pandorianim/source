@@ -91,7 +91,7 @@
     "welcomeback": "\/me Witaj ponownie, %%NAME%%. A jednak wróciłeś skarbie! (Welcome back %%NAME2%%!)",
     "songknown": "\/me @%%NAME%%, utwór ten był niedawno puszczany. Czy chcesz nas zanudzić na śmierć? (History skip)",
     "notavailable": "/me @%%NAME%%, twój utwór został usunięty przez Illuminatów! Przykro mi :( (Song not available)",
-    "timelimit": "/me @%%NAME%%, wybrany utwór jest dłuższy niż %%MAXLENGTH%% minut, musisz mnie ładnie poprosić, bym Ci pozwoliła puszczać takie piosenki. (To long, max 7 min)",
+    "timelimit": "/me @%%NAME%%, wybrany utwór jest dłuższy niż %%MAXLENGTH%% minut, musisz mnie ładnie poprosić, bym Ci pozwoliła puszczać takie piosenki. (To long, max 8 min)",
     "permissionownsong": "/me :up: @%%NAME%% posiada uprawnienia aby grać swoje własne produkcje!",
     "isblacklisted": "/me Utwór znajduje się na blackliście %%BLACKLIST%%. Pomijam...",
     "isopen": "/me Ruletka włączona! Wpisz !join aby dołączyć! (Wylosowana osoba zostanie przeniesiona na losowe miejsce w kolejce)",
