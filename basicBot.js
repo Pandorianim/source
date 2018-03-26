@@ -1042,11 +1042,11 @@
                         name: name,
                         maxlength: basicBot.settings.maximumSongLength
                     }));
-                    if (basicBot.settings.smartSkip) {
-                        return basicBot.roomUtilities.smartSkip();
-                    } else {
+                    setTimeout(function () {
+                        if (API.getMedia().cid !== newMedia.cid) return;
+                        API.sendChat(`${basicBot.settings.maximumSongLength} minutes passed, skipping`);
                         return API.moderateForceSkip();
-                    }
+                    }, basicBot.settings.maximumSongLength * 60 * 1000);
                 }
             }, 2000);
             var format = obj.media.format;
