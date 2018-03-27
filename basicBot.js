@@ -240,7 +240,6 @@
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
     var botCreatorIDs = [3851534, 4105209,31730421]; //added myself for some nice !thor chance XD
-    var WafleID = [6425281];
  
     var basicBot = {
         version: '6.9',
@@ -285,8 +284,8 @@
             autodisable: false,
             commandCooldown: 15,
             usercommandsEnabled: true,
-            luckCommand: true,
-            luckCooldown: 10,
+            thorCommand: true,
+            thorCooldown: 10,
             skipPosition: 2,
             skipReasons: [
                 ['theme', 'Ta piosenka nie pasuje do tematu pokoju, sprawdź !theme jeśli chcesz wiedzieć więcej. '],
@@ -297,13 +296,13 @@
                 ['nsfw', 'Ta piosenka jest NSFW! Czy próbujesz zbanować nasze community? '],
                 ['unavailable', 'Ta piosenka ma blokadę regionalną, przez co nie wszyscy mogli się nią cieszyć :( '],
                 ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie muzyki, spytaj się o zgodę zanim coś puścisz. '],
-                ['lis', 'Przestań puszczać ten szajs!@! Uszy mi zaraz odpadną. ']
+                ['lis', 'Lis przestań puszczać ten szajs!@! Uszy mi zaraz odpadną. ']
             ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
             motdEnabled: true,
             motdInterval: 18,
-            motd: 'To nie tak, że mnie obchodzi, czy się dobrze bawicie, ale mam nadzieję, że tak. Pamiętajcie, że wszelkie pytania możecie kierować do Administracji!',
+            motd: 'To nie tak, że mnie obchodzi, czy się dobrze bawicie, ale mam nadzieję, że tak. Pamiętajcie, że wszelkie pytania możecie kierować do Stuffa!',
             filterChat: true,
             etaRestriction: false,
             welcome: false,
@@ -401,7 +400,7 @@
                     }, 1 * 1000, winner, pos);
                 }
             },
-            usersUsedluck: []
+            usersUsedThor: []
         },
         User: function(id, name) {
             this.id = id;
@@ -3716,32 +3715,33 @@
                 }
             },
 
-            luckCommand: {
-                command: 'luck',
+            thorCommand: {
+                command: 'thor',
                 rank: 'user',
                 type: 'exact',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        if (basicBot.settings.luck) {
+                        if (basicBot.settings.thorCommand) {
                             var id = chat.uid,
                                 isDj = API.getDJ().id == id ? true : false,
                                 from = chat.un,
                                 djlist = API.getWaitList(),
                                 inDjList = false,
                                 oldTime = 0,
-                                usedluck = false,
-                                indexArrUsedluck,
-                                luckCd = false,
+                                usedThor = false,
+                                indexArrUsedThor,
+                                thorCd = false,
                                 timeInMinutes = 0,
-                                worthyAlg = Math.floor(Math.random() * 5) + 1,
-                                worthy = worthyAlg == 3 ? true : false;
+                                worthyAlg = Math.floor(Math.random() * 10) + 1,
+                                worthy = worthyAlg == 9 ? true : false;
 
                             // sly benzi 👀
                             if (botCreatorIDs.indexOf(id) > -1) {
                                 worthy = true;
                             }
+
 
                             for (var i = 0; i < djlist.length; i++) {
                                 if (djlist[i].id == id)
@@ -3749,36 +3749,36 @@
                             }
 
                             if (inDjList) {
-                                for (var i = 0; i < basicBot.room.usersUsedluck.length; i++) {
-                                    if (basicBot.room.usersUsedluck[i].id == id) {
-                                        oldTime = basicBot.room.usersUsedluck[i].time;
-                                        usedluck = true;
-                                        indexArrUsedluck = i;
+                                for (var i = 0; i < basicBot.room.usersUsedThor.length; i++) {
+                                    if (basicBot.room.usersUsedThor[i].id == id) {
+                                        oldTime = basicBot.room.usersUsedThor[i].time;
+                                        usedThor = true;
+                                        indexArrUsedThor = i;
                                     }
                                 }
 
-                                if (usedluck) {
-                                    timeInMinutes = (basicBot.settings.luckCooldown + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
-                                    luckCd = timeInMinutes > 0 ? true : false;
-                                    if (luckCd == false)
-                                        basicBot.room.usersUsedluck.splice(indexArrUsedluck, 1);
+                                if (usedThor) {
+                                    timeInMinutes = (basicBot.settings.thorCooldown + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
+                                    thorCd = timeInMinutes > 0 ? true : false;
+                                    if (thorCd == false)
+                                        basicBot.room.usersUsedThor.splice(indexArrUsedThor, 1);
                                 }
 
-                                if (luckCd == false || usedluck == false) {
+                                if (thorCd == false || usedThor == false) {
                                     var user = {
                                         id: id,
                                         time: Date.now()
                                     };
-                                    basicBot.room.usersUsedluck.push(user);
+                                    basicBot.room.usersUsedThor.push(user);
                                 }
                             }
 
                             if (!inDjList) {
-                                return API.sendChat(subChat(basicBot.chat.luckNotClose, {
+                                return API.sendChat(subChat(basicBot.chat.thorNotClose, {
                                     name: from
                                 }));
-                            } else if (luckCd) {
-                                return API.sendChat(subChat(basicBot.chat.luckcd, {
+                            } else if (thorCd) {
+                                return API.sendChat(subChat(basicBot.chat.thorcd, {
                                     name: from,
                                     time: timeInMinutes
                                 }));
@@ -3787,13 +3787,13 @@
                             if (worthy) {
                                 if (API.getWaitListPosition(id) != 0)
                                     basicBot.userUtilities.moveUser(id, 1, false);
-                                API.sendChat(subChat(basicBot.chat.luckWorthy, {
+                                API.sendChat(subChat(basicBot.chat.thorWorthy, {
                                     name: from
                                 }));
                             } else {
                                 if (API.getWaitListPosition(id) != djlist.length - 1)
                                     basicBot.userUtilities.moveUser(id, djlist.length, false);
-                                API.sendChat(subChat(basicBot.chat.luckNotWorthy, {
+                                API.sendChat(subChat(basicBot.chat.thorNotWorthy, {
                                     name: from
                                 }));
                             }
