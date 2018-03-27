@@ -240,7 +240,7 @@
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
     var botCreatorIDs = [3851534, 4105209,31730421]; //added myself for some nice !thor chance XD
-    var WafleID = [];
+    var WafleID = [6425281];
  
     var basicBot = {
         version: '6.9',
