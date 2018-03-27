@@ -296,7 +296,7 @@
                 ['nsfw', 'Ta piosenka jest NSFW! Czy próbujesz zbanować nasze community? '],
                 ['unavailable', 'Ta piosenka ma blokadę regionalną, przez co nie wszyscy mogli się nią cieszyć :( '],
                 ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie muzyki, spytaj się o zgodę zanim coś puścisz. '],
-                ['lis', 'Lis przestań puszczać ten szajs!@! Uszy mi zaraz odpadną. ']
+                ['lis', 'Przestań puszczać ten szajs!@! Uszy mi zaraz odpadną. ']
             ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
@@ -3716,7 +3716,7 @@
             },
 
             thorCommand: {
-                command: 'thor',
+                command: 'luck',
                 rank: 'user',
                 type: 'exact',
                 functionality: function(chat, cmd) {
@@ -3734,8 +3734,8 @@
                                 indexArrUsedThor,
                                 thorCd = false,
                                 timeInMinutes = 0,
-                                worthyAlg = Math.floor(Math.random() * 10) + 1,
-                                worthy = worthyAlg == 9 ? true : false;
+                                worthyAlg = Math.floor(Math.random() * 5) + 1,
+                                worthy = worthyAlg == 3 ? true : false;
 
                             // sly benzi 👀
                             if (botCreatorIDs.indexOf(id) > -1) {
