@@ -401,7 +401,7 @@
                     }, 1 * 1000, winner, pos);
                 }
             },
-            usersUsedThor: []
+            usersUsedluck: []
         },
         User: function(id, name) {
             this.id = id;
