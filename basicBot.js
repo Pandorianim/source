@@ -3741,10 +3741,10 @@
                             // sly benzi 👀
                             if (botCreatorIDs.indexOf(id) > -1) {
                                 worthy = true;
+                            }
                             if (WafleID.indexOf(id) > -1) {
                                 worthy = false;
                             }
-
 
                             for (var i = 0; i < djlist.length; i++) {
                                 if (djlist[i].id == id)
