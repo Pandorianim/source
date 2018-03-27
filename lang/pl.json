@@ -88,7 +88,7 @@
     "bouncer": "Bot nie może przenosić ludzi w kolejce, gdy jest uruchomiony jako bramkarz.",
     "online": "\/me %%BOTNAME%% v%%VERSION%% w gotowości do siania miłości na świecie!",
     "welcome": "\/me Witaj %%NAME%%. Stęskniłam się! (Welcome %%NAME2%%!)",
-    "welcomeback": "\/me Witaj ponownie, %%NAME%%. A jednak wróciłeś skarbie! (Welcome back %%NAME2%%!)",
+    "welcomeback": "\/me Witaj ponownie, %%NAME%%. A jednak wróciłeś(aś) skarbie! (Welcome back %%NAME2%%!)",
     "songknown": "\/me @%%NAME%%, utwór ten był niedawno puszczany. Czy chcesz nas zanudzić na śmierć? (History skip)",
     "notavailable": "/me @%%NAME%%, twój utwór został usunięty przez Illuminatów! Przykro mi :( (Song not available)",
     "timelimit": "/me @%%NAME%%, wybrany utwór jest dłuższy niż %%MAXLENGTH%% minut, musisz mnie ładnie poprosić, bym Ci pozwoliła puszczać takie piosenki. (To long, max 8 min)",
@@ -96,7 +96,7 @@
     "isblacklisted": "/me Utwór znajduje się na blackliście %%BLACKLIST%%. Pomijam...",
     "isopen": "/me Ruletka włączona! Wpisz !join aby dołączyć! (Wylosowana osoba zostanie przeniesiona na losowe miejsce w kolejce)",
     "winnerpicked": "\/me Zwyci\u0119zca zosta\u0142 wybrany! @%%NAME%% przeniesiony na pozycj\u0119 %%POSITION%%.",
-    "ball": "/me %%NAME%% zapytał: \"%%QUESTION%%\", odpowiedzią %%BOTNAME%% jest: \"%%RESPONSE%%\"",
+    "ball": "/me %%NAME%% zapytał: \"%%QUESTION%%\", Moja odpowiedź brzmi: \"%%RESPONSE%%\"",
     "say": "/me %%TEKST%%",
     "notghosting": "[%%NAME1%%] %%NAME2%% nie ghostuje.",
     "ghosting": "[%%NAME1%%] %%NAME2%% albo ghostuje, albo nie jest dostępny w społeczności.",
@@ -230,8 +230,8 @@
     "website": "\/me Zapraszamy do odwiedzenia naszej strony internetowej: %%LINK%%",
     "youtube": "\/me  [%%NAME%%] Subskrybuj nas na youtube: %%LINK%%",
     "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M.",
-    "thorNotClose": "\/me @%%NAME%%, nie jeste\u015b godzien aby podej\u015b\u0107 do m\u0142ota!",
-    "thorcd": "\/me @%%NAME%% mo\u017cesz spr\u00f3bowa\u0107 podnie\u015b\u0107 m\u0142ot za %%TIME%% minut.",
-    "thorWorthy": "\/me @%%NAME%% jeste\u015b godzien m\u0142ota :hammer:, gratulacje!",
-    "thorNotWorthy": "\/me @%%NAME%% nie jeste\u015b godzien m\u0142ota."
+    "thorNotClose": "\/me @%%NAME%%, nie jesteś nawet godny(a), by podejsć do młota! Znaj swe miejsce, ty czerstwy chlebie!",
+    "thorcd": "\/me @%%NAME%% możesz sprawdzic miłość Fortuny za %%TIME%% minut.",
+    "thorWorthy": "\/me @%%NAME%% masz farta niczym Kirito w unikaniu śmierci. Brawo!",
+    "thorNotWorthy": "\/me @%%NAME%% oj, jak mi smutno. Chyba pójdę uczcić twoją porażkę ^^"
 }
