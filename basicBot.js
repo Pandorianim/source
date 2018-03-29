@@ -288,7 +288,7 @@
             thorCooldown: 10,
             skipPosition: 2,
             skipReasons: [
-                ['theme', 'Ta piosenka nie pasuje do tematu pokoju, sprawdź !theme jeśli chcesz wiedzieć więcej. '],
+                ['theme', 'Nie czujesz tego weaboowskiego bitu, po więcej info sprawdź !rules. '],
                 ['op', 'Ta piosenka jest puszczana tak często, że już nią rzygam. '],
                 ['history', 'Inna wersja tej piosenki była niedawno puszczana. Czy to jest sabotaż? '],
                 ['rak', 'Ta piosenka to czysty rak, przez Ciebie trafię na onkologię :( '],
@@ -307,7 +307,7 @@
             etaRestriction: false,
             welcome: false,
             opLink: null,
-            rulesLink: null,
+            rulesLink: 'Regulamin[PL]: https://goo.gl/hwYFqD Rules[EN]: https://goo.gl/8Hc7mT',
             themeLink: null,
             fbLink: null,
             youtubeLink: null,
@@ -315,7 +315,7 @@
             intervalMessages: [],
             messageInterval: 5,
             songstats: false,
-            commandLiteral: '$',
+            commandLiteral: '!',
             blacklists: {
                 NSFW: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/NSFWlist.json',
                 OP: 'https://rawgit.com/Pandorianim/source/master/custom/blacklists/OPlist.json',
