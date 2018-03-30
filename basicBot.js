@@ -2740,25 +2740,6 @@
                 }
             },
 
-            killCommand: {
-                command: 'kill',
-                rank: 'bouncer',
-                type: 'exact',
-                functionality: function(chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
-                    else {
-                        storeToStorage();
-                        //sendToSocket();
-                        API.sendChat(basicBot.chat.kill);
-                        basicBot.disconnectAPI();
-                        setTimeout(function() {
-                            kill();
-                        }, 1000);
-                    }
-                }
-            },
-
             languageCommand: {
                 command: 'language',
                 rank: 'manager',
@@ -3275,25 +3256,6 @@
                             name: chat.un,
                             response: basicBot.chat.advices[randomAdvice]
                         }));
-                    }
-                }
-            },
-
-            refreshCommand: {
-                command: 'refresh',
-                rank: 'manager',
-                type: 'exact',
-                functionality: function(chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
-                    else {
-                        //sendToSocket();
-                        storeToStorage();
-                        basicBot.disconnectAPI();
-                        setTimeout(function() {
-                            window.location.reload(false);
-                        }, 1000);
-
                     }
                 }
             },
