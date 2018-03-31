@@ -3272,13 +3272,15 @@
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
-                    var randomEmote = Math.floor(Math.random() * basicBot.chat.advices.length);
-                    var randomMsg =(`${randomEmoji()}|${randomEmoji()}|${randomEmoji()}`);
+                    var randomMsg = `${randomEmoji()}|${randomEmoji()}|${randomEmoji()}`;
+                    else if(randomMsg === ':bomb::bomb::bomb:'){
+                        API.sendChat(randomMsg);
+                    }
+                    else if(randomMsg === ':gem::gem::gem:'){
+                        API.sendChat(randomMsg);
+                    }
                     else {
-                        API.sendChat(subChat(basicBot.chat.advice, {
-                            name: chat.un,
-                            response: basicBot.chat.advices[randomEmote]
-                        }));
+                        API.sendChat(randomMsg);
                     }
                 }
             },
