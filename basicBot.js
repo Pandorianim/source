@@ -3273,11 +3273,15 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     var randomMsg = `${randomEmoji()}|${randomEmoji()}|${randomEmoji()}`;
-                    else if(randomMsg === ':bomb::bomb::bomb:'){
+                    var id = chat.uid;
+                    var djlist = API.getWaitList();
+                    else if(randomMsg === ':bomb:|:bomb:|:bomb:') {
                         API.sendChat(randomMsg);
+                        basicBot.userUtilities.moveUser(id, djlist.length, false);
                     }
-                    else if(randomMsg === ':gem::gem::gem:'){
+                    else if(randomMsg === ':gem:|:gem:|:gem:') {
                         API.sendChat(randomMsg);
+                        basicBot.userUtilities.moveUser(id, 1, false);
                     }
                     else {
                         API.sendChat(randomMsg);
