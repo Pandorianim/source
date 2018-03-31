@@ -3270,7 +3270,7 @@
                 rank: 'user',
                 type: 'exact',
                 functionality: function(chat, cmd) {
-                    var randomMsg = `${randomEmoji()}|${randomEmoji()}|${randomEmoji()}`;
+                    var randomMsg = `${basicBot.userUtilities.randomEmoji()}|${basicBot.userUtilities.randomEmoji()}|${basicBot.userUtilities.randomEmoji()}`;
                     var id = chat.uid;
                     var djlist = API.getWaitList();
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
