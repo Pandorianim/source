@@ -286,6 +286,7 @@
             usercommandsEnabled: true,
             thorCommand: true,
             thorCooldown: 10,
+            slotCooldown: 1,
             skipPosition: 2,
             skipReasons: [
                 ['theme', 'Nie czujesz tego weeboowskiego bitu, po więcej info sprawdź !rules. '],
