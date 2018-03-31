@@ -400,7 +400,8 @@
                     }, 1 * 1000, winner, pos);
                 }
             },
-            usersUsedThor: []
+            usersUsedThor: [],
+            usersUsedSlot: []
         },
         User: function(id, name) {
             this.id = id;
@@ -3272,10 +3273,56 @@
                 functionality: function(chat, cmd) {
                     var randomMsg = `${basicBot.userUtilities.randomEmoji()}|${basicBot.userUtilities.randomEmoji()}|${basicBot.userUtilities.randomEmoji()}`;
                     var id = chat.uid;
+                    var inDjList = false;
                     var djlist = API.getWaitList();
+                    var usedSlot = false;
+                    var indexArrUsedSlot;
+                    var slotCd = false;
+                    var oldTime = 0;
+                    var from = chat.un;
+                    var timeInMinutes = 0;
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
-                    else if(randomMsg === ':bomb:|:bomb:|:bomb:') {
+                    else {
+                    for (var i = 0; i < djlist.length; i++) {
+                                if (djlist[i].id == id)
+                                    inDjList = true;
+                            }
+
+                    if (inDjList) {
+                                for (var i = 0; i < basicBot.room.usersUsedSlot.length; i++) {
+                                    if (basicBot.room.usersUsedSlot[i].id == id) {
+                                        oldTime = basicBot.room.usersUsedSlot[i].time;
+                                        usedSlot = true;
+                                        indexArrUsedSlot = i;
+                                    }
+                                }
+
+                                if (usedSlot) {
+                                    timeInMinutes = (basicBot.settings.thorCooldown + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
+                                    slotCd = timeInMinutes > 0 ? true : false;
+                                    if (slotCd == false)
+                                        basicBot.room.usersUsedThor.splice(indexArrUsedSlot, 1);
+                                }
+
+                                if (slotCd == false || usedSlot == false) {
+                                    var user = {
+                                        id: id,
+                                        time: Date.now()
+                                    };
+                                    basicBot.room.usersUsedSlot.push(user);
+                                }
+                    }
+
+                    if (!inDjList) {
+                                return API.sendChat(subChat(basicBot.chat.slotNotClose, {
+                                    name: from
+                                }));
+                            } else if (slotCd) {
+                                return API.sendChat(subChat(basicBot.chat.null));
+                            }
+
+                    if(randomMsg === ':bomb:|:bomb:|:bomb:') {
                         API.sendChat(randomMsg);
                         basicBot.userUtilities.moveUser(id, djlist.length, false);
                     }
