@@ -470,6 +470,11 @@
                 }
                 return false;
             },
+            randomEmoji: function() {
+            var randomE = Math.floor(Math.random() * basicBot.chat.emoji.length);
+            return basicBot.chat.emoji[randomE];
+
+            },
             voteRatio: function(id) {
                 var user = basicBot.userUtilities.lookupUser(id);
                 var votes = user.votes;
@@ -3255,6 +3260,24 @@
                         API.sendChat(subChat(basicBot.chat.advice, {
                             name: chat.un,
                             response: basicBot.chat.advices[randomAdvice]
+                        }));
+                    }
+                }
+            },
+
+                slotsCommand: {
+                command: ['slot', 'slots'],
+                rank: 'user',
+                type: 'exact',
+                functionality: function(chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
+                    var randomEmote = Math.floor(Math.random() * basicBot.chat.advices.length);
+                    var randomMsg =(`${randomEmoji()}|${randomEmoji()}|${randomEmoji()}`);
+                    else {
+                        API.sendChat(subChat(basicBot.chat.advice, {
+                            name: chat.un,
+                            response: basicBot.chat.advices[randomEmote]
                         }));
                     }
                 }
