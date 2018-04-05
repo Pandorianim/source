@@ -33,6 +33,8 @@
     ],
     "emoji": [
         ":gem:",
+        ":gem:",
+        ":gem:",
         ":bomb:",
         ":bomb:",
         ":lips:",
@@ -242,6 +244,8 @@
     "youtube": "\/me  [%%NAME%%] Subskrybuj nas na youtube: %%LINK%%",
     "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M.",
     "thorNotClose": "\/me @%%NAME%%, nie jesteś nawet godny(a), by podejsć do młota! Znaj swe miejsce, ty czerstwy chlebie!",
+    "slotNotClose": "\/me By grać w jednorękiego bandytę, musisz być w liście DJ'i.",
+    "null": "",
     "thorcd": "\/me @%%NAME%% możesz sprawdzic miłość Fortuny za %%TIME%% minut.",
     "thorWorthy": "\/me @%%NAME%% masz farta niczym Kirito w unikaniu śmierci. Brawo!",
     "thorNotWorthy": "\/me @%%NAME%% oj, jak mi smutno. Chyba pójdę uczcić twoją porażkę ^^"
