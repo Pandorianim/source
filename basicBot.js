@@ -3300,10 +3300,10 @@
                                 }
 
                                 if (usedSlot) {
-                                    timeInMinutes = (basicBot.settings.thorCooldown + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
+                                    timeInMinutes = (basicBot.settings.slotCooldown + 1) - (Math.floor((oldTime - Date.now()) * Math.pow(10, -5)) * -1);
                                     slotCd = timeInMinutes > 0 ? true : false;
                                     if (slotCd == false)
-                                        basicBot.room.usersUsedThor.splice(indexArrUsedSlot, 1);
+                                        basicBot.room.usersUsedSlot.splice(indexArrUsedSlot, 1);
                                 }
 
                                 if (slotCd == false || usedSlot == false) {
