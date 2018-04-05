@@ -3394,16 +3394,41 @@
                                 return API.sendChat(subChat(basicBot.chat.null));
                             }
 
+                     var words = randomMsg.split('|');
+                     var gemNum = 0;
+                     var bombNum = 0;
+                     var pos = API.getWaitListPosition(id);
+                     for (var k = 0; k < words.length; k++) {
+                     if (words[k] === ":gem:") {
+                     gemNum++;
+                     }
+                     }
+                     for (var k = 0; k < words.length; k++) {
+                     if (words[k] === ":bomb:") {
+                     bombNum++;
+                     }
+                     }
+                     if(gemNum===2){
+                     API.sendChat(randomMsg);
+                     basicBot.userUtilities.moveUser(id, pos - 1, false);
+                     }
+                     if(bombNum===2){
+                     API.sendChat(randomMsg);
+                     basicBot.userUtilities.moveUser(id, pos + 1, false);
+                     }
                      switch(randomMsg){
                       case ":bomb:|:bomb:|:bomb:":
                        API.sendChat(randomMsg);
                        basicBot.userUtilities.moveUser(id, djlist.length, false);
+                       break;
                       case ":gem:|:gem:|:gem:":
                        API.sendChat(randomMsg);
                        basicBot.userUtilities.moveUser(id, 1, false);
+                       break;
                       default:
                        API.sendChat(randomMsg);
                     }
+                     
                 }
                 }
             },
