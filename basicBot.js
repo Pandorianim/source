@@ -3402,7 +3402,6 @@
                      if (words[k] === ":gem:") {
                      gemNum++;
                      }
-                     k=0;
                      }
                      for (var k = 0; k < words.length; k++) {
                      if (words[k] === ":bomb:") {
