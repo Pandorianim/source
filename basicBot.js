@@ -3402,6 +3402,7 @@
                      if (words[k] === ":gem:") {
                      gemNum++;
                      }
+                     k=0;
                      }
                      for (var k = 0; k < words.length; k++) {
                      if (words[k] === ":bomb:") {
@@ -3409,12 +3410,12 @@
                      }
                      }
                      if(gemNum===2){
-                     API.sendChat(randomMsg);
                      basicBot.userUtilities.moveUser(id, pos - 1, false);
+                     return API.sendChat(randomMsg);
                      }
                      if(bombNum===2){
-                     API.sendChat(randomMsg);
                      basicBot.userUtilities.moveUser(id, pos + 1, false);
+                     return API.sendChat(randomMsg);
                      }
                      switch(randomMsg){
                       case ":bomb:|:bomb:|:bomb:":
