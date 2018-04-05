@@ -3405,6 +3405,7 @@
                        API.sendChat(randomMsg);
                     }
                 }
+                }
             },
 
             reloadCommand: {
