@@ -1167,6 +1167,77 @@
                 basicBot.userUtilities.updatePosition(user, API.getWaitListPosition(users[i].id) + 1);
             }
         },
+
+        chatcleanerADM: function(chat) {
+            if (!basicBot.settings.filterChat) return false;
+            if (basicBot.userUtilities.getPermission(chat.uid) >= API.ROLE.ADMIN) return false;
+            var msg = chat.message;
+            var words = msg.split(' ');
+            var containsLetters = false;
+            for (var i = 0; i < msg.length; i++) {
+                ch = msg.charAt(i);
+                if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9') || ch === ':' || ch === '^') containsLetters = true;
+            }
+            if (msg === '') {
+                return true;
+            }
+            if (!containsLetters && (msg.length === 1 || msg.length > 3)) return true;
+            msg = msg.replace(/[ ,;.:\/=~+%^*\-\\"'&@#]/g, '');
+            var capitals = 0;
+            var ch;
+            for (var i = 0; i < msg.length; i++) {
+                ch = msg.charAt(i);
+                if (ch >= 'A' && ch <= 'Z') capitals++;
+            }
+            if (capitals >= 20) {
+                API.sendChat(subChat(basicBot.chat.caps, {
+                    name: chat.un
+                }));
+                return true;
+            }
+            msg = msg.toLowerCase();
+            for (var k = 0; k < words.length; k++) {
+            for (var j = 0; j < basicBot.chatUtilities.swearA.length; j++) {
+                if (words[k] === basicBot.chatUtilities.swearA[j]) {
+                    API.sendChat(subChat(basicBot.chat.swearA, {
+                        name: chat.un
+                    }));
+                    return true;
+                }
+            }
+            }
+            for (var j = 0; j < basicBot.chatUtilities.spam.length; j++) {
+                if (msg === basicBot.chatUtilities.spam[j]) {
+                    API.sendChat(subChat(basicBot.chat.spam, {
+                        name: chat.un
+                    }));
+                    return true;
+                }
+            }
+            for (var k = 0; k < words.length; k++) {
+            if (words[k] === 'kaczka') {
+                API.sendChat(subChat(basicBot.chat.askkaczka, {
+                    name: chat.un
+                }));
+                return true;
+            }
+            }
+            for (var k = 0; k < words.length; k++) {
+            if (words[k] === 'skip') {
+                API.sendChat(subChat(basicBot.chat.askskip, {
+                    name: chat.un
+                }));
+                return false;
+            }
+            }
+            if (msg === 'monika.chr') {
+                API.sendChat(subChat(basicBot.chat.askmonikachr, {
+                    name: chat.un
+                }));
+                return true;
+            }
+            return false;
+        },
         chatcleaner: function(chat) {
             if (!basicBot.settings.filterChat) return false;
             if (basicBot.userUtilities.getPermission(chat.uid) >= API.ROLE.BOUNCER) return false;
