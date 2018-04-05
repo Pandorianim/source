@@ -3323,16 +3323,15 @@
                                 return API.sendChat(subChat(basicBot.chat.null));
                             }
 
-                    if(randomMsg === ':bomb:|:bomb:|:bomb:') {
-                        API.sendChat(randomMsg);
-                        basicBot.userUtilities.moveUser(id, djlist.length, false);
-                    }
-                    else if(randomMsg === ':gem:|:gem:|:gem:') {
-                        API.sendChat(randomMsg);
-                        basicBot.userUtilities.moveUser(id, 1, false);
-                    }
-                    else {
-                        API.sendChat(randomMsg);
+                     switch(randomMsg){
+                      case ":bomb:|:bomb:|:bomb:":
+                       API.sendChat(randomMsg);
+                       basicBot.userUtilities.moveUser(id, djlist.length, false);
+                      case ":gem:|:gem:|:gem:":
+                       API.sendChat(randomMsg);
+                       basicBot.userUtilities.moveUser(id, 1, false);
+                      default:
+                       API.sendChat(randomMsg);
                     }
                 }
             },
