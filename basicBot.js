@@ -3409,11 +3409,11 @@
                      }
                      }
                      if(gemNum===2){
-                     basicBot.userUtilities.moveUser(id, pos - 1, true);
+                     basicBot.userUtilities.moveUser(id, pos, true);
                      return API.sendChat(randomMsg);
                      }
                      if(bombNum===2){
-                     basicBot.userUtilities.moveUser(id, pos + 1, true);
+                     basicBot.userUtilities.moveUser(id, pos + 2, true);
                      return API.sendChat(randomMsg);
                      }
                      switch(randomMsg){
