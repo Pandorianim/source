@@ -251,7 +251,7 @@
     "website": "\/me Zapraszamy do odwiedzenia naszej strony internetowej: %%LINK%%",
     "youtube": "\/me  [%%NAME%%] Subskrybuj nas na youtube: %%LINK%%",
     "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M.",
-    "thorNotClose": "\/me @%%NAME%%, nie jesteś nawet godny(a), by podejsć do młota! Znaj swe miejsce, ty czerstwy chlebie!",
+    "thorNotClose": "\/me @%%NAME%% Nic ci nie da wpisanie tej komendy! Znaj swe miejsce czerstwy chlebie!",
     "slotNotClose": "\/me By grać w jednorękiego bandytę, musisz być w liście DJ'i.",
     "null": "",
     "thorcd": "\/me @%%NAME%% możesz sprawdzic miłość Fortuny za %%TIME%% minut.",
