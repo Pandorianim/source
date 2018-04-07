@@ -43,6 +43,14 @@
         ":beer:",
         ":beer:"
     ],
+
+    "slotBeer": [
+        "Trzymaj 2 piwa. Jedno dla mnie, drugie dla ciebie skarbie",
+        "Może i nic nie wygrałeś, ale chociaż możemy się napić.",
+        "Wygrałeś 2 piwka. Możesz utopić w nich smutek.",
+        "Może i piwa to nie diamenty, ale o ile badziej użyteczne!."
+    ],
+    "slotBeerCon": "@%%NAME%% %%RESPONSE%%",
     "advices": [
         "jeśli nie udaje ci się za pierwszym razem, to spadochroniarstwo nie jest sportem dla Ciebie.",
         "nie bądź niezastąpionym. Jeśli nie można Cię zastąpić, nigdy nie dostaniesz awansu.",
