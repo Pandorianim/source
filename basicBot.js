@@ -3416,7 +3416,10 @@
                      if(basicBot.userUtilities.countSymbols(":beer:", words)===2){
                      API.sendChat(randomMsg);
                      var randomLine = Math.floor(Math.random() * basicBot.chat.slotBeer.length);
-                     return API.sendChat(subChat(basicBot.chat.slotBeer[randomLine]));
+                     return API.sendChat(subChat(basicBot.chat.slotBeerCon, {
+                            name: chat.un,
+                            response: basicBot.chat.slotBeer[randomLine]
+                        }));
                      }
                      switch(randomMsg){
                       case ":bomb:|:bomb:|:bomb:":
