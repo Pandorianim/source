@@ -3410,11 +3410,13 @@
                      return API.sendChat(randomMsg);
                      }
                      if(basicBot.userUtilities.countSymbols(":bomb:", words)===2){
-                     basicBot.userUtilities.moveUser(id, pos, true);
+                     basicBot.userUtilities.moveUser(id, pos + 2, true);
                      return API.sendChat(randomMsg);
                      }
                      if(basicBot.userUtilities.countSymbols(":beer:", words)===2){
-                     return API.sendChat(randomMsg);
+                     API.sendChat(randomMsg);
+                     var randomLine = Math.floor(Math.random() * basicBot.chat.slotBeer.length);
+                     return API.sendChat(subChat(basicBot.chat.slotBeer[randomLine]));
                      }
                      switch(randomMsg){
                       case ":bomb:|:bomb:|:bomb:":
