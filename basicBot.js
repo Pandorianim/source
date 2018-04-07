@@ -477,10 +477,14 @@
             return basicBot.chat.emoji[randomE];
 
             },
-            countEmoji: function(emote, number, words) {
-            var randomE = Math.floor(Math.random() * basicBot.chat.emoji.length);
-            return basicBot.chat.emoji[randomE];
-
+            countSymbols: function(emote, words) {
+            var symbolNumber = 0;
+            for (var k = 0; k < words.length; k++) {
+                     if (words[k] === emote) {
+                     symbolNumber++;
+                     }
+                     }
+            return symbolNumber;
             },
             voteRatio: function(id) {
                 var user = basicBot.userUtilities.lookupUser(id);
@@ -3400,25 +3404,16 @@
                             }
 
                      var words = randomMsg.split('|');
-                     var gemNum = 0;
-                     var bombNum = 0;
                      var pos = API.getWaitListPosition(id);
-                     for (var k = 0; k < words.length; k++) {
-                     if (words[k] === ":gem:") {
-                     gemNum++;
-                     }
-                     }
-                     for (var k = 0; k < words.length; k++) {
-                     if (words[k] === ":bomb:") {
-                     bombNum++;
-                     }
-                     }
-                     if(gemNum===2){
+                     if(basicBot.userUtilities.countSymbols(":gem:", words)===2){
                      basicBot.userUtilities.moveUser(id, pos, true);
                      return API.sendChat(randomMsg);
                      }
-                     if(bombNum===2){
-                     basicBot.userUtilities.moveUser(id, pos + 2, true);
+                     if(basicBot.userUtilities.countSymbols(":bomb:", words)===2){
+                     basicBot.userUtilities.moveUser(id, pos, true);
+                     return API.sendChat(randomMsg);
+                     }
+                     if(basicBot.userUtilities.countSymbols(":beer:", words)===2){
                      return API.sendChat(randomMsg);
                      }
                      switch(randomMsg){
