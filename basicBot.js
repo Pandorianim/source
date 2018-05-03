@@ -3430,6 +3430,48 @@
                        API.sendChat(randomMsg);
                        basicBot.userUtilities.moveUser(id, 1, false);
                        break;
+                      case ":banana:|:banana:|:banana:":
+                       API.sendChat(randomMsg);
+                       return setTimeout(function(){API.sendChat(subChat(basicBot.chat.slotBeerCon, {
+                            name: chat.un,
+                            response: basicBot.chat.threebanana
+                        })); }, 300);
+                       break;
+                      case ":eye:|:eye:|:eye:":
+                       API.sendChat(randomMsg);
+                       return setTimeout(function(){API.sendChat(subChat(basicBot.chat.slotBeerCon, {
+                            name: chat.un,
+                            response: basicBot.chat.threeeye
+                        })); }, 300);
+                       break;
+                      case ":lips:|:lips:|:lips:":
+                       API.sendChat(randomMsg);
+                       return setTimeout(function(){API.sendChat(subChat(basicBot.chat.slotBeerCon, {
+                            name: chat.un,
+                            response: basicBot.chat.threelips
+                        })); }, 300);
+                       break;
+                      case ":rainbow:|:rainbow:|:rainbow:":
+                       API.sendChat(randomMsg);
+                       return setTimeout(function(){API.sendChat(subChat(basicBot.chat.slotBeerCon, {
+                            name: chat.un,
+                            response: basicBot.chat.threerainbow
+                        })); }, 300);
+                       break;
+                      case ":beer:|:beer:|:beer:":
+                       API.sendChat(randomMsg);
+                       return setTimeout(function(){API.sendChat(subChat(basicBot.chat.slotBeerCon, {
+                            name: chat.un,
+                            response: basicBot.chat.threebeer
+                        })); }, 300);
+                       break;
+                      case ":beer:|:lips:|:banana:":
+                       API.sendChat(randomMsg);
+                       return setTimeout(function(){API.sendChat(subChat(basicBot.chat.slotBeerCon, {
+                            name: chat.un,
+                            response: basicBot.chat.lisslotjoke
+                        })); }, 300);
+                       break;
                       default:
                        API.sendChat(randomMsg);
                     }
