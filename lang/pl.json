@@ -45,10 +45,16 @@
     ],
 
     "slotBeer": [
-        "Trzymaj 2 piwa. Jedno dla mnie, drugie dla ciebie skarbie",
+        "Trzymaj 2 piwa. Jedno dla mnie, drugie dla ciebie skarbie.",
         "Może i nic nie wygrałeś, ale chociaż możemy się napić.",
         "Wygrałeś 2 piwka. Możesz utopić w nich smutek.",
         "Może i piwa to nie diamenty, ale o ile badziej użyteczne!."
+    ],
+    "EslotBeer": [
+        "Hold 2 beers. One for you, one for me.",
+        "Maybe you didn't win anythink, but at least we can have a drink.",
+        "You won 2 hops. You can sink your sorrows in them.",
+        "Maybe beers ain't diamonds, but much more useful!"
     ],
     "slotBeerCon": "@%%NAME%% %%RESPONSE%%",
     "advices": [
@@ -252,7 +258,8 @@
     "youtube": "\/me  [%%NAME%%] Subskrybuj nas na youtube: %%LINK%%",
     "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M.",
     "thorNotClose": "\/me @%%NAME%% Nic ci nie da wpisanie tej komendy! Znaj swe miejsce czerstwy chlebie!",
-    "slotNotClose": "\/me By grać w jednorękiego bandytę, musisz być w liście DJ'i.",
+    "slotNotClose": "\/me @%%NAME%% By grać w jednorękiego bandytę, musisz być w liście DJ'i.",
+    "EslotNotClose": "\/me @%%NAME%% To play slot machine you have to be in waitlist!",
     "null": "",
     "thorcd": "\/me @%%NAME%% możesz sprawdzic miłość Fortuny za %%TIME%% minut.",
     "thorWorthy": "\/me @%%NAME%% masz farta niczym Kirito w unikaniu śmierci. Brawo!",
