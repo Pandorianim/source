@@ -3402,7 +3402,7 @@
                     }
 
                     if (!inDjList) {
-                                if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
+                                if (basicBot.userUtilities.userlang(name)==="pl") {
                                  return API.sendChat(subChat(basicBot.chat.slotNotClose, {
                                     name: name
                                 }));
@@ -3429,7 +3429,7 @@
                      if(basicBot.userUtilities.countSymbols(":beer:", words)===2){
                      API.sendChat(randomMsg);
                      var BeerrandomLine = Math.floor(Math.random() * basicBot.chat.slotBeer.length);
-                     if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
+                     if (basicBot.userUtilities.userlang(name)==="pl") {
                       return setTimeout(function(){API.sendChat(subChat(basicBot.chat.slotBeerCon, {
                             name: chat.un,
                             response: basicBot.chat.slotBeer[BeerrandomLine]
