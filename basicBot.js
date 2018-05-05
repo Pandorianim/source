@@ -477,6 +477,11 @@
             return basicBot.chat.emoji[randomE];
 
             },
+            userlang: function(name) {
+            var user = basicBot.userUtilities.lookupUserName(name);
+            var lang = basicBot.userUtilities.getUser(user).language;
+            return lang;
+            },
             countSymbols: function(emote, words) {
             var symbolNumber = 0;
             for (var k = 0; k < words.length; k++) {
