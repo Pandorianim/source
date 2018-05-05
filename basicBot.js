@@ -3402,7 +3402,7 @@
                     }
 
                     if (!inDjList) {
-                                if (basicBot.userUtilities.userlang(name)==="pl") {
+                                if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
                                  return API.sendChat(subChat(basicBot.chat.slotNotClose, {
                                     name: name
                                 }));
@@ -3429,7 +3429,7 @@
                      if(basicBot.userUtilities.countSymbols(":beer:", words)===2){
                      API.sendChat(randomMsg);
                      var BeerrandomLine = Math.floor(Math.random() * basicBot.chat.slotBeer.length);
-                     if (basicBot.userUtilities.userlang(name)==="pl") {
+                     if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
                       return setTimeout(function(){API.sendChat(subChat(basicBot.chat.slotBeerCon, {
                             name: chat.un,
                             response: basicBot.chat.slotBeer[BeerrandomLine]
@@ -3948,6 +3948,7 @@
                                 djlist = API.getWaitList(),
                                 inDjList = false,
                                 oldTime = 0,
+                                name = chat.un,
                                 usedThor = false,
                                 indexArrUsedThor,
                                 thorCd = false,
@@ -3992,28 +3993,57 @@
                             }
 
                             if (!inDjList) {
-                                return API.sendChat(subChat(basicBot.chat.thorNotClose, {
+                                if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
+                                 return API.sendChat(subChat(basicBot.chat.thorNotClose, {
                                     name: from
                                 }));
+                                }
+                                else (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
+                                 return API.sendChat(subChat(basicBot.chat.EthorNotClose, {
+                                    name: from
+                                }));
+                                }
                             } else if (thorCd) {
-                                return API.sendChat(subChat(basicBot.chat.thorcd, {
+                                if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
+                                 return API.sendChat(subChat(basicBot.chat.thorcd, {
                                     name: from,
                                     time: timeInMinutes
                                 }));
+                                }
+                                else (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
+                                 return API.sendChat(subChat(basicBot.chat.Ethorcd, {
+                                    name: from,
+                                    time: timeInMinutes
+                                }));
+                                }
                             }
 
                             if (worthy) {
                                 if (API.getWaitListPosition(id) != 0)
                                     basicBot.userUtilities.moveUser(id, 1, false);
+                             if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
                                 API.sendChat(subChat(basicBot.chat.thorWorthy, {
                                     name: from
                                 }));
+                             }
+                             else {
+                                 API.sendChat(subChat(basicBot.chat.EthorWorthy, {
+                                    name: from
+                                }));
+                             }
                             } else {
                                 if (API.getWaitListPosition(id) != djlist.length - 1)
                                     basicBot.userUtilities.moveUser(id, djlist.length, false);
+                             if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
                                 API.sendChat(subChat(basicBot.chat.thorNotWorthy, {
                                     name: from
                                 }));
+                             }
+                             else {
+                                API.sendChat(subChat(basicBot.chat.EthorNotWorthy, {
+                                    name: from
+                                }));
+                             }
                             }
                         }
                     }
