@@ -258,7 +258,7 @@
     "youtube": "\/me  [%%NAME%%] Subskrybuj nas na youtube: %%LINK%%",
     "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M.",
     "thorNotClose": "\/me @%%NAME%% Nic ci nie da wpisanie tej komendy! Znaj swe miejsce czerstwy chlebie!",
-    "EthorNotClose": "\/me @%%NAME%% Nothink will come from writing this command! Know your place, you stale bread!",
+    "EthorNotClose": "\/me @%%NAME%% It is futile to enter this command! Know your place, stale bread!",
     "slotNotClose": "\/me @%%NAME%% By grać w jednorękiego bandytę, musisz być w liście DJ'i.",
     "EslotNotClose": "\/me @%%NAME%% To play slot machine you have to be in waitlist!",
     "null": "",
