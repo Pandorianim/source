@@ -305,6 +305,7 @@
             motdInterval: 18,
             motd: 'To nie tak, że mnie obchodzi, czy się dobrze bawicie, ale mam nadzieję, że tak. Pamiętajcie, że wszelkie pytania możecie kierować do Administracji!',
             filterChat: true,
+            mainLang: 'pl',
             etaRestriction: false,
             welcome: true,
             opLink: null,
@@ -3365,7 +3366,7 @@
                     var indexArrUsedSlot;
                     var slotCd = false;
                     var oldTime = 0;
-                    var from = chat.un;
+                    var name = chat.un;
                     var timeInMinutes = 0;
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
@@ -3401,9 +3402,16 @@
                     }
 
                     if (!inDjList) {
-                                return API.sendChat(subChat(basicBot.chat.slotNotClose, {
-                                    name: from
+                                if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
+                                 return API.sendChat(subChat(basicBot.chat.slotNotClose, {
+                                    name: name
                                 }));
+                                }
+                                else {
+                                 return API.sendChat(subChat(basicBot.chat.EslotNotClose, {
+                                    name: name
+                                }));
+                                }
                             } else if (slotCd) {
                                 return API.sendChat(subChat(basicBot.chat.null));
                             }
@@ -3420,11 +3428,19 @@
                      }
                      if(basicBot.userUtilities.countSymbols(":beer:", words)===2){
                      API.sendChat(randomMsg);
-                     var randomLine = Math.floor(Math.random() * basicBot.chat.slotBeer.length);
-                     return setTimeout(function(){API.sendChat(subChat(basicBot.chat.slotBeerCon, {
+                     var BeerrandomLine = Math.floor(Math.random() * basicBot.chat.slotBeer.length);
+                     if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
+                      return setTimeout(function(){API.sendChat(subChat(basicBot.chat.slotBeerCon, {
                             name: chat.un,
-                            response: basicBot.chat.slotBeer[randomLine]
+                            response: basicBot.chat.slotBeer[BeerrandomLine]
                         })); }, 300);
+                      }
+                     else {
+                       return setTimeout(function(){API.sendChat(subChat(basicBot.chat.slotBeerCon, {
+                            name: chat.un,
+                            response: basicBot.chat.EslotBeer[BeerrandomLine]
+                        })); }, 300);
+                     }
                      }
                      switch(randomMsg){
                       case ":bomb:|:bomb:|:bomb:":
