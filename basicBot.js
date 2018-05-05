@@ -3998,7 +3998,7 @@
                                     name: from
                                 }));
                                 }
-                                else (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
+                                else {
                                  return API.sendChat(subChat(basicBot.chat.EthorNotClose, {
                                     name: from
                                 }));
@@ -4010,7 +4010,7 @@
                                     time: timeInMinutes
                                 }));
                                 }
-                                else (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
+                                else {
                                  return API.sendChat(subChat(basicBot.chat.Ethorcd, {
                                     name: from,
                                     time: timeInMinutes
