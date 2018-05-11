@@ -3354,9 +3354,9 @@
             },
 
                 summonCommand: {
-                command: 'advice',
-                rank: 'manager',
-                type: 'exact',
+                command: 'summon',
+                rank: 'mod',
+                type: 'startsWith',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
@@ -3370,7 +3370,8 @@
                         if (msg.length > cmd.length + 2) {
                             if (typeof user !== 'undefined') {
                              API.sendChat(subChat(basicBot.chat.summonUsed, {
-                                    name: chat.un
+                                    name: chat.un,
+                                    name2: name
                                    }));
                                 (function theLoop (i) {
                                  setTimeout(function () {
