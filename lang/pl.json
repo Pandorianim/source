@@ -262,7 +262,7 @@
     "slotNotClose": "\/me @%%NAME%% By grać w jednorękiego bandytę, musisz być w liście DJ'i.",
     "EslotNotClose": "\/me @%%NAME%% To play slot machine you have to be in waitlist!",
     "null": "",
-    "summonUsed": "[%%NAME%% przyzwał @%%NAME2%%!]",
+    "summonUsed": "[%%NAME%% przyzywa @%%NAME2%%!]",
     "summonUser": "\/me Przyzywam @%%NAME%%. Przybądź do nas i powstań z martywych!",
     "thorcd": "\/me @%%NAME%% możesz sprawdzic miłość Fortuny za %%TIME%% minut.",
     "Ethorcd": "\/me @%%NAME%% you can check the love of Fortune in %%TIME%% minutes.",
