@@ -3380,8 +3380,8 @@
                                if (--i) {
                                theLoop(i);
                                }
-                              }, 3000);
-                             })(10);
+                              }, 800);
+                             })(5);
                             } else API.sendChat(subChat(basicBot.chat.invaliduserspecified, {
                                 name: chat.un
                             }));
