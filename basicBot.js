@@ -2210,7 +2210,7 @@
             },
 
             cookieCommand: {
-                command: 'cookie',
+                command: ['cookie', 'cookies'],
                 rank: 'user',
                 type: 'startsWith',
                 getCookie: function(chat) {
