@@ -3353,6 +3353,43 @@
                 }
             },
 
+                summonCommand: {
+                command: 'advice',
+                rank: 'manager',
+                type: 'exact',
+                functionality: function(chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
+                    else {
+                    var msg = chat.message;
+                        if (msg.length === cmd.length) return API.sendChat(subChat(basicBot.chat.nouserspecified, {
+                            name: chat.un
+                        }));
+                        var name = msg.substr(cmd.length + 2);
+                        var user = basicBot.userUtilities.lookupUserName(name);
+                        if (msg.length > cmd.length + 2) {
+                            if (typeof user !== 'undefined') {
+                             API.sendChat(subChat(basicBot.chat.summonUsed, {
+                                    name: chat.un
+                                   }));
+                                (function theLoop (i) {
+                                 setTimeout(function () {
+                                 API.sendChat(subChat(basicBot.chat.summonUser, {
+                                    name: name
+                                   }));
+                               if (--i) {
+                               theLoop(i);
+                               }
+                              }, 3000);
+                             })(10);
+                            } else API.sendChat(subChat(basicBot.chat.invaliduserspecified, {
+                                name: chat.un
+                            }));
+                        }
+                    }
+                }
+            },
+
                 slotsCommand: {
                 command: ['slot', 'slots'],
                 rank: 'user',
