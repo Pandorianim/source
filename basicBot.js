@@ -3368,7 +3368,7 @@
                         var name = msg.substr(cmd.length + 2);
                         var user = basicBot.userUtilities.lookupUserName(name);
                         if (msg.length > cmd.length + 2) {
-                            if (basicBot.userUtilities.getUser(user) != null) {
+                            if (!API.getUser(user)) {
                              API.sendChat(subChat(basicBot.chat.summonUsed, {
                                     name: chat.un,
                                     name2: name
