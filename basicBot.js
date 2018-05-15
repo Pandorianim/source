@@ -1729,7 +1729,7 @@
                         var name = msg.substr(cmd.length + 2);
                         var user = basicBot.userUtilities.lookupUserName(name);
                         if (msg.length > cmd.length + 2) {
-                            if (typeof user !== 'undefined') {
+                            if (typeof user !== 'boolean') {
                                 if (basicBot.room.roomevent) {
                                     basicBot.room.eventArtists.push(user.id);
                                 }
