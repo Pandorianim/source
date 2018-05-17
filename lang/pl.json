@@ -262,7 +262,7 @@
     "slotNotClose": "\/me @%%NAME%% By grać w jednorękiego bandytę, musisz być w liście DJ'i.",
     "EslotNotClose": "\/me @%%NAME%% To play slot machine you have to be in waitlist!",
     "null": "",
-    "bamboo": "\/me %%NAME%% you have been attacked by hungry panda! The wise choice is to surrender all bamboos! :bamboo::bamboo::bamboo:,",
+    "bamboo": "\/me %%NAME%% you have been attacked by hungry panda! The wise choice is to surrender all bamboos! :bamboo::bamboo::bamboo:",
     "summonUsed": "\/me [%%NAME%% przyzywa @%%NAME2%%!]",
     "summonUser": "\/me Przyzywam @%%NAME%% Przybądź do nas i powstań z martywych!",
     "thorcd": "\/me @%%NAME%% możesz sprawdzic miłość Fortuny za %%TIME%% minut.",
