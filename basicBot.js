@@ -248,7 +248,7 @@
         loggedInID: null,
         scriptLink: 'https://rawgit.com/Pandorianim/source/master/basicBot.js',
         cmdLink: 'http://git.io/245Ppg',
-        chatLink: 'https://rawgit.com/Pandorianim/source/master/lang/pl.json',
+        chatLink: 'https://rawgit.com/Pandorianim/source/master/lang/pl1.json',
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -256,7 +256,7 @@
         settings: {
             botName: 'JustMonika',
             language: 'polish',
-            chatLink: 'https://rawgit.com/Pandorianim/source/master/lang/pl.json',
+            chatLink: 'https://rawgit.com/Pandorianim/source/master/lang/pl1.json',
             scriptLink: 'https://rawgit.com/Pandorianim/source/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
