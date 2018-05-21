@@ -910,6 +910,7 @@
                 basicBot.room.users[index].inRoom = true;
                 var u = basicBot.userUtilities.lookupUser(user.id);
                 var jt = u.jointime;
+                var name = user.username;
                 var t = Date.now() - jt;
                 if (t < 10 * 1000) greet = false;
                 else welcomeback = true;
@@ -933,16 +934,32 @@
               console.log(botCreatorIDs);
                 welcomeback ?
                     setTimeout(function(user) {
+                        if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
                         API.sendChat(subChat(basicBot.chat.welcomeback, {
                             name: user.username,
                             name2: user.username
                         }));
+                        }
+                        else {
+                        API.sendChat(subChat(basicBot.chat.welcomeback, {
+                            name: user.username,
+                            name2: user.username
+                        }));
+                        }
                     }, 1 * 1000, user) :
                     setTimeout(function(user) {
+                        if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
                         API.sendChat(subChat(basicBot.chat.welcome, {
                             name: user.username,
                             name2: user.username
                         }));
+                        }
+                        else {
+                        API.sendChat(subChat(basicBot.chat.welcome, {
+                            name: user.username,
+                            name2: user.username
+                        }));
+                        }
                     }, 1 * 1000, user);
             }
         },
