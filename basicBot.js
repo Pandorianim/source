@@ -934,7 +934,7 @@
               console.log(botCreatorIDs);
                 welcomeback ?
                     setTimeout(function(user) {
-                        if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
+                        if (basicBot.userUtilities.getUser(user).language===basicBot.settings.mainLang) {
                         API.sendChat(subChat(basicBot.chat.welcomeback, {
                             name: user.username,
                         }));
@@ -946,7 +946,7 @@
                         }
                     }, 1 * 1000, user) :
                     setTimeout(function(user) {
-                        if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
+                        if (basicBot.userUtilities.getUser(user).language===basicBot.settings.mainLang) {
                         API.sendChat(subChat(basicBot.chat.welcome, {
                             name: user.username,
                         }));
