@@ -937,13 +937,11 @@
                         if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
                         API.sendChat(subChat(basicBot.chat.welcomeback, {
                             name: user.username,
-                            name2: user.username
                         }));
                         }
                         else {
-                        API.sendChat(subChat(basicBot.chat.welcomeback, {
+                        API.sendChat(subChat(basicBot.chat.Ewelcomeback, {
                             name: user.username,
-                            name2: user.username
                         }));
                         }
                     }, 1 * 1000, user) :
@@ -951,13 +949,11 @@
                         if (basicBot.userUtilities.userlang(name)===basicBot.settings.mainLang) {
                         API.sendChat(subChat(basicBot.chat.welcome, {
                             name: user.username,
-                            name2: user.username
                         }));
                         }
                         else {
-                        API.sendChat(subChat(basicBot.chat.welcome, {
+                        API.sendChat(subChat(basicBot.chat.Ewelcome, {
                             name: user.username,
-                            name2: user.username
                         }));
                         }
                     }, 1 * 1000, user);
