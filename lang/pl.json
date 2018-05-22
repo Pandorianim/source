@@ -117,7 +117,7 @@
     "welcome": "\/me Witaj %%NAME%%. Mam nadzieję, że się lepiej poznamy ;)",
     "Ewelcome": "\/me Welcome %%NAME%%! I hope that we get to know each other better ;)",
     "welcomeback": "\/me Witaj ponownie, %%NAME%%. A jednak wróciłeś(aś) skarbie!",
-    "Ewelcomeback": "\/me Welcome back %%NAME%%! So you've finally got back honey!",
+    "Ewelcomeback": "\/me Welcome back %%NAME%%! So you finally came back honey!",
     "songknown": "\/me @%%NAME%%, utwór ten był niedawno puszczany. Czy chcesz nas zanudzić na śmierć? (History skip)",
     "notavailable": "/me @%%NAME%%, twój utwór został usunięty przez Illuminatów! Przykro mi :( (Song not available)",
     "timelimit": "/me @%%NAME%%, wybrany utwór jest dłuższy niż %%MAXLENGTH%% minut, musisz mnie ładnie poprosić, bym Ci pozwoliła puszczać takie piosenki. (To long, max 8 min)",
