@@ -299,6 +299,15 @@
                 ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie muzyki, spytaj się o zgodę zanim coś puścisz. '],
                 ['lis', 'Przestań puszczać ten szajs!@! Uszy mi zaraz odpadną. ']
             ],
+         EskipReasons: [
+                ['theme', 'You do not feel this WEEB tune, check !rules for more info. '],
+                ['op', 'This song is played so often, that i am puking it already. '],
+                ['history', 'Other version of this song was played recently. Is it sabotage? '],
+                ['rak', 'This song is cancer, bcs of you i will get to oncology. :( '],
+                ['sound', 'This song has got bad quality of sound/video, pls do not hurt our aesthetic senses. '],
+                ['nsfw', 'This song is NSFW! Do you try to permban our community? '],
+                ['unavailable', 'This song has got regional blockade, so not everyone was able to enjoy it :( ']
+            ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
             motdEnabled: true,
