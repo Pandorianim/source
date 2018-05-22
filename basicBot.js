@@ -3621,7 +3621,7 @@
                                     API.moderateForceSkip();
                                     setTimeout(function() {
                                     API.moderateRemoveDJ(user.id);
-                                    }, 1 * 1000, user);
+                                    }, 1 * 2000, user);
                                 } else API.moderateRemoveDJ(user.id);
                             } else API.sendChat(subChat(basicBot.chat.removenotinwl, {
                                 name: chat.un,
