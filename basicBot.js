@@ -295,18 +295,16 @@
                 ['rak', 'Ta piosenka to czysty rak, przez Ciebie trafię na onkologię :( '],
                 ['sound', 'Ta piosenka ma kijową jakość dźwięku/obrazu, proszę nie krzywdź naszych zmysłów estetycznych. '],
                 ['nsfw', 'Ta piosenka jest NSFW! Czy próbujesz zbanować nasze community? '],
-                ['unavailable', 'Ta piosenka ma blokadę regionalną, przez co nie wszyscy mogli się nią cieszyć :( '],
+                ['un', 'Ta piosenka ma blokadę regionalną, przez co nie wszyscy mogli się nią cieszyć :( '],
                 ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie muzyki, spytaj się o zgodę zanim coś puścisz. '],
-                ['lis', 'Przestań puszczać ten szajs!@! Uszy mi zaraz odpadną. ']
-            ],
-         EskipReasons: [
-                ['theme', 'You do not feel this WEEB tune, check !rules for more info. '],
-                ['op', 'This song is played so often, that i am puking it already. '],
-                ['history', 'Other version of this song was played recently. Is it sabotage? '],
-                ['rak', 'This song is cancer, bcs of you i will get to oncology. :( '],
-                ['sound', 'This song has got bad quality of sound/video, pls do not hurt our aesthetic senses. '],
-                ['nsfw', 'This song is NSFW! Do you try to permban our community? '],
-                ['unavailable', 'This song has got regional blockade, so not everyone was able to enjoy it :( ']
+                ['lis', 'Przestań puszczać ten szajs!@! Uszy mi zaraz odpadną. '],
+                ['Etheme', 'You do not feel this WEEB tune, check !rules for more info. '],
+                ['Eop', 'This song is played so often, that i am puking it already. '],
+                ['Ehistory', 'Other version of this song was played recently. Is it sabotage? '],
+                ['Erak', 'This song is cancer, bcs of you i will get to oncology. :( '],
+                ['Esound', 'This song has got bad quality of sound/video, pls do not hurt our aesthetic senses. '],
+                ['Ensfw', 'This song is NSFW! Do you try to permban our community? '],
+                ['Eun', 'This song has got regional blockade, so not everyone was able to enjoy it :( ']
             ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
