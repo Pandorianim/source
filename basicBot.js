@@ -297,14 +297,16 @@
                 ['nsfw', 'Ta piosenka jest NSFW! Czy próbujesz zbanować nasze community? '],
                 ['un', 'Ta piosenka ma blokadę regionalną, przez co nie wszyscy mogli się nią cieszyć :( '],
                 ['menel', 'Menele potrzebują specjalnego pozwolenia na puszczanie muzyki, spytaj się o zgodę zanim coś puścisz. '],
-                ['lis', 'Przestań puszczać ten szajs!@! Uszy mi zaraz odpadną. '],
-                ['Etheme', 'You do not feel this WEEB tune, check !rules for more info. '],
-                ['Eop', 'This song is played so often, that i am puking it already. '],
-                ['Ehistory', 'Other version of this song was played recently. Is it sabotage? '],
-                ['Erak', 'This song is cancer, bcs of you i will get to oncology. :( '],
-                ['Esound', 'This song has got bad quality of sound/video, pls do not hurt our aesthetic senses. '],
-                ['Ensfw', 'This song is NSFW! Do you try to permban our community? '],
-                ['Eun', 'This song has got regional blockade, so not everyone was able to enjoy it :( ']
+                ['lis', 'Przestań puszczać ten szajs!@! Uszy mi zaraz odpadną. ']
+            ],
+            EskipReasons: [
+                ['theme', 'You do not feel this WEEB tune, check !rules for more info. '],
+                ['op', 'This song is played so often, that i am puking it already. '],
+                ['history', 'Other version of this song was played recently. Is it sabotage? '],
+                ['rak', 'This song is cancer, bcs of you i will get to oncology. :( '],
+                ['sound', 'This song has got bad quality of sound/video, pls do not hurt our aesthetic senses. '],
+                ['nsfw', 'This song is NSFW! Do you try to permban our community? '],
+                ['un', 'This song has got regional blockade, so not everyone was able to enjoy it :( ']
             ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
@@ -3753,6 +3755,60 @@
                                 if (reason.indexOf(r) !== -1) {
                                     validReason = true;
                                     msgSend += basicBot.settings.skipReasons[i][1];
+                                }
+                            }
+                            if (validReason) {
+                                API.sendChat(subChat(basicBot.chat.usedskip, {
+                                    name: chat.un
+                                }));
+                                if (basicBot.settings.smartSkip && timeLeft > timeElapsed) {
+                                    basicBot.roomUtilities.smartSkip(msgSend);
+                                } else {
+                                    API.moderateForceSkip();
+                                    setTimeout(function() {
+                                        API.sendChat(msgSend);
+                                    }, 500);
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+
+         EskipCommand: {
+                command: ['Eskip', 'Esmartskip'],
+                rank: 'bouncer',
+                type: 'startsWith',
+                functionality: function(chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
+                    else {
+                        if (basicBot.room.skippable) {
+
+                            var timeLeft = API.getTimeRemaining();
+                            var timeElapsed = API.getTimeElapsed();
+                            var dj = API.getDJ();
+                            var name = dj.username;
+                            var msgSend = '@' + name + ', ';
+
+                            if (chat.message.length === cmd.length) {
+                                API.sendChat(subChat(basicBot.chat.usedskip, {
+                                    name: chat.un
+                                }));
+                                if (basicBot.settings.smartSkip && timeLeft > timeElapsed) {
+                                    basicBot.roomUtilities.smartSkip();
+                                } else {
+                                    API.moderateForceSkip();
+                                }
+                            }
+                            var validReason = false;
+                            var msg = chat.message;
+                            var reason = msg.substring(cmd.length + 1);
+                            for (var i = 0; i < basicBot.settings.EskipReasons.length; i++) {
+                                var r = basicBot.settings.EskipReasons[i][0];
+                                if (reason.indexOf(r) !== -1) {
+                                    validReason = true;
+                                    msgSend += basicBot.settings.EskipReasons[i][1];
                                 }
                             }
                             if (validReason) {
