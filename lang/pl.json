@@ -210,7 +210,7 @@
     "youarenext": "/me @%%NAME%%, będziesz DJ-em po tym utworze.",
     "youaredj": "/me @%%NAME%%, właśnie jesteś DJ-em.",
     "eta": "/me @%%NAME%%, jesteś %%POSITION%% na liście oczekiwania i zostaniesz DJ-em za około %%TIME%%.",
-    "facebook": "\/me Polub nas na facebooku: %%LINK%%",
+    "discord": "\/me This is link to our discord: %%LINK%%",
     "starterhelp": "\/me Ten obrazek pomo\u017ce Ci zacz\u0105\u0107 na plugu: %%LINK%%",
     "roulettejoin": "@%%NAME%% do\u0142\u0105czy\u0142 do ruletki! (Wpisz !leave je\u017celi chcesz zrezygnowa\u0107).",
     "jointime": "\/me [@%%NAMEFROM%%] @%%USERNAME%% jest w spo\u0142eczno\u015bci %%TIME%%.",
