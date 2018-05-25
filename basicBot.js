@@ -320,7 +320,7 @@
             opLink: null,
             rulesLink: 'Regulamin[PL]: https://goo.gl/hwYFqD Rules[EN]: https://goo.gl/8Hc7mT',
             themeLink: null,
-            fbLink: null,
+            discordLink: 'https://discordapp.com/invite/NPeQXeX',
             youtubeLink: null,
             website: null,
             intervalMessages: [],
@@ -2551,17 +2551,17 @@
                 }
             },
 
-            fbCommand: {
-                command: 'fb',
+            discordCommand: {
+                command: 'discord',
                 rank: 'user',
                 type: 'exact',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        if (typeof basicBot.settings.fbLink === 'string')
-                            API.sendChat(subChat(basicBot.chat.facebook, {
-                                link: basicBot.settings.fbLink
+                        if (typeof basicBot.settings.discordLink === 'string')
+                            API.sendChat(subChat(basicBot.chat.discord, {
+                                link: basicBot.settings.discordLink
                             }));
                     }
                 }
