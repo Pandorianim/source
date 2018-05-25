@@ -1288,7 +1288,7 @@
             if (msg === '') {
                 return true;
             }
-            if (!containsLetters && (msg.length === 1 || msg.length > 3)) return true;
+            if (!containsLetters && (msg.length === 1 || msg.length > 3)) return false;
             msg = msg.replace(/[ ,;.:\/=~+%^*\-\\"'&@#]/g, '');
             var capitals = 0;
             var ch;
@@ -1296,7 +1296,7 @@
                 ch = msg.charAt(i);
                 if (ch >= 'A' && ch <= 'Z') capitals++;
             }
-            if (capitals >= 40) {
+            if (capitals >= 20) {
                 API.sendChat(subChat(basicBot.chat.caps, {
                     name: chat.un
                 }));
