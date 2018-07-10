@@ -324,6 +324,7 @@
                 ['haha', 'http://pa1.narvii.com/6519/dee453473d7f34c7e6e949c0a3d1b7499e76093b_hq.gif'],
                 ['eating', 'https://i.imgur.com/JVW3MpY.gif'],
                 ['iamback', 'https://media1.tenor.com/images/fcdfcfd5a6adfbfe4cc43f742ea705fa/tenor.gif'],
+                ['ball', 'https://78.media.tumblr.com/3ecc61d4ab1fcd94fdf9bdec522b27a1/tumblr_oouwfeeQdk1vutp8oo1_500.gif'],
                 ['killme', 'https://78.media.tumblr.com/645b399ef7a25b922a5e8df7f86ea3e6/tumblr_mt9xpjrocG1ssqxwho1_500.gif']
             ],
             afkpositionCheck: 15,
