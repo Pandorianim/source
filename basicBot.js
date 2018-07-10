@@ -335,6 +335,10 @@
                 ['cashslap', 'https://i.imgur.com/Tu3uNiE.gif'],
                 ['animeinsult', 'https://data.whicdn.com/images/255066114/original.gif'],
                 ['hentai', 'https://i.imgur.com/j3crXqY.gif'],
+                ['huh', 'https://media1.tenor.com/images/9124e878ad57f8694aac30151291d2a6/tenor.gif'],
+                ['yamero', 'https://img.fireden.net/a/image/1524/60/1524606554315.gif'],
+                ['wtf', 'https://i.gifer.com/7ZAD.gif'],
+                ['confused', 'https://zippy.gfycat.com/HealthyCornyAmazontreeboa.gif'],
                 ['repairing', 'https://i.pinimg.com/originals/97/5d/fa/975dfa81655faa293eec42b1452bd61d.gif'],
                 ['killme', 'https://78.media.tumblr.com/645b399ef7a25b922a5e8df7f86ea3e6/tumblr_mt9xpjrocG1ssqxwho1_500.gif']
             ],
