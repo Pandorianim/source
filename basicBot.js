@@ -3904,7 +3904,6 @@
                             }
                         }
                     }
-                }
             },
 
             skipposCommand: {
