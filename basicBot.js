@@ -322,6 +322,7 @@
                 ['fighting', 'https://zippy.gfycat.com/OnlyColossalEmperorshrimp.gif'],
                 ['failfighting', 'https://78.media.tumblr.com/d215ec53edc18f85786d0e4a36b5dd4e/tumblr_nwsimdWjKo1r3rdh2o3_540.gif'],
                 ['haha', 'http://pa1.narvii.com/6519/dee453473d7f34c7e6e949c0a3d1b7499e76093b_hq.gif'],
+                ['eating', 'https://i.imgur.com/JVW3MpY.gif'],
                 ['killme', 'https://78.media.tumblr.com/645b399ef7a25b922a5e8df7f86ea3e6/tumblr_mt9xpjrocG1ssqxwho1_500.gif']
             ],
             afkpositionCheck: 15,
