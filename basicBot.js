@@ -308,6 +308,21 @@
                 ['nsfw', 'This song is NSFW! Do you try to permban our community? '],
                 ['un', 'This song has got regional blockade, so not everyone was able to enjoy it :( ']
             ],
+            memes: [
+                ['clap', 'https://vignette.wikia.nocookie.net/degrassi/images/2/22/Rikka_clap.gif'],
+                ['sarcasmclap', 'https://media1.tenor.com/images/3a79f7bc177a52f81b5e858066b3e70a/tenor.gif '],
+                ['bravo', 'https://pa1.narvii.com/6185/3d805e9906c9e705a2ad087d63562155bec540b0_hq.gif'],
+                [':P', 'https://78.media.tumblr.com/8dbf5d38e4543ff3736ab16e064e23d7/tumblr_ol2j8xRFpK1t2ctz9o2_500.gif'],
+                ['nooo', 'https://i.gifer.com/Z7YP.gif'],
+                ['facepalm', 'http://gifimage.net/wp-content/uploads/2017/11/facepalm-anime-gif-7.gif'],
+                ['barrier', 'https://i.gifer.com/C6OE.gif'],
+                ['fail', 'https://i.chzbgr.com/full/6569353472/h1A8B8F55/'],
+                ['rage', 'https://i.gifer.com/2dTZ.gif'],
+                ['looking', 'https://media1.tenor.com/images/83ac0009c17fe5163a64b6d360e2af76/tenor.gif'],
+                ['fighting', 'https://zippy.gfycat.com/OnlyColossalEmperorshrimp.gif'],
+                ['failfighting', 'https://78.media.tumblr.com/d215ec53edc18f85786d0e4a36b5dd4e/tumblr_nwsimdWjKo1r3rdh2o3_540.gif'],
+                ['killme', 'https://78.media.tumblr.com/645b399ef7a25b922a5e8df7f86ea3e6/tumblr_mt9xpjrocG1ssqxwho1_500.gif']
+            ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
             motdEnabled: true,
@@ -3851,6 +3866,41 @@
                                         API.sendChat(msgSend);
                                     }, 500);
                                 }
+                            }
+                        }
+                    }
+                }
+            },
+
+                  memeCommand: {
+                command: ['mem', 'meme'],
+                rank: 'user',
+                type: 'startsWith',
+                functionality: function(chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
+                    else {
+
+                            var name = dj.username;
+                            var msgSend;
+                            if (chat.message.length === cmd.length) {
+                                API.sendChat(subChat(basicBot.chat.null, {
+                                }));
+                            }
+                            var validReason = false;
+                            var msg = chat.message;
+                            var reason = msg.substring(cmd.length + 1);
+                            for (var i = 0; i < basicBot.settings.memes.length; i++) {
+                                var r = basicBot.settings.memes[i][0];
+                                if (reason.indexOf(r) !== -1) {
+                                    validReason = true;
+                                    msgSend = basicBot.settings.memes[i][1];
+                                }
+                            }
+                            if (validReason) {
+                                    setTimeout(function() {
+                                        API.sendChat(msgSend);
+                                    }, 500);
                             }
                         }
                     }
