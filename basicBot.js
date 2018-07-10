@@ -316,11 +316,12 @@
                 ['nooo', 'https://i.gifer.com/Z7YP.gif'],
                 ['facepalm', 'http://gifimage.net/wp-content/uploads/2017/11/facepalm-anime-gif-7.gif'],
                 ['barrier', 'https://i.gifer.com/C6OE.gif'],
-                ['fail', 'https://i.chzbgr.com/full/6569353472/h1A8B8F55/'],
+                ['fail', 'https://media1.tenor.com/images/fe1d82a5f9793dc7469730f15f048a26/tenor.gif?itemid=9696487.gif'],
                 ['rage', 'https://i.gifer.com/2dTZ.gif'],
                 ['looking', 'https://media1.tenor.com/images/83ac0009c17fe5163a64b6d360e2af76/tenor.gif'],
                 ['fighting', 'https://zippy.gfycat.com/OnlyColossalEmperorshrimp.gif'],
                 ['failfighting', 'https://78.media.tumblr.com/d215ec53edc18f85786d0e4a36b5dd4e/tumblr_nwsimdWjKo1r3rdh2o3_540.gif'],
+                ['haha', 'http://pa1.narvii.com/6519/dee453473d7f34c7e6e949c0a3d1b7499e76093b_hq.gif'],
                 ['killme', 'https://78.media.tumblr.com/645b399ef7a25b922a5e8df7f86ea3e6/tumblr_mt9xpjrocG1ssqxwho1_500.gif']
             ],
             afkpositionCheck: 15,
