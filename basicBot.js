@@ -3377,35 +3377,6 @@
                 }
             },
 
-
-         clapCommand: {
-                command: ['clap', 'Clap', 'clapping'],
-                rank: 'user',
-                type: 'exact',
-                functionality: function(chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
-                    else {
-                        API.sendChat(basicBot.chat.clap)
-                    }
-                }
-            },
-
-
-         sarcasmCommand: {
-                command: ['sarcasm', 'sarkazm', 'acidness'],
-                rank: 'user',
-                type: 'exact',
-                functionality: function(chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
-                    else {
-                        API.sendChat(basicBot.chat.sarcasmclap)
-                    }
-                }
-            },
-
-
             sayingCommand: {
                 command: 'saying',
                 rank: 'user',
