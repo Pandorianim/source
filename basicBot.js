@@ -354,7 +354,7 @@
             opLink: null,
             rulesLink: 'Regulamin[PL]: https://goo.gl/hwYFqD Rules[EN]: https://goo.gl/8Hc7mT',
             themeLink: null,
-            discordLink: 'https://discordapp.com/invite/NPeQXeX',
+            discordLink: 'https://discord.gg/b8uzzhj',
             youtubeLink: null,
             website: null,
             intervalMessages: [],
