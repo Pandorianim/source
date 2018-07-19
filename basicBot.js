@@ -2900,8 +2900,16 @@
                             if (time > 24 * 60 * 60) API.moderateBanUser(user.id, 1, API.BAN.PERMA);
                             else API.moderateBanUser(user.id, 1, API.BAN.DAY);
                             setTimeout(function(id, name) {
-                                API.moderateUnbanUser(id);
-                                console.log('Unbanned @' + name + '. (' + id + ')');
+                                $.ajax({
+    type: 'DELETE',
+    url: `https://plug.dj/_/bans/${id}`,
+    error: e => {
+        API.chatLog(e);
+    },
+    success: () => {
+        API.chatLog(`Unbanned ${name}. ID: ${id}`);
+    }
+});
                             }, time * 60 * 1000, user.id, name);
                         } else API.sendChat(subChat(basicBot.chat.invalidtime, {
                             name: chat.un
