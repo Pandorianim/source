@@ -4457,7 +4457,18 @@
                             if (msg.indexOf('@') === -1 && arg === 'all') {
                                 if (permFrom > API.ROLE.BOUNCER) {
                                     for (var i = 0; i < mutedUsers.length; i++) {
-                                        API.moderateUnmuteUser(mutedUsers[i].id);
+                                        setTimeout(() => {
+    $.ajax({
+        type: 'DELETE',
+        url: `https://plug.dj/_/mutes/${mutedUsers[i].id}`,
+        error: e => {
+            API.chatLog(e);
+        },
+        success: () => {
+            API.chatLog(`Successfully unmuted ${mutedUsers[i].username}.`);
+        }
+    });
+}, i * 3500);
                                     }
                                     API.sendChat(subChat(basicBot.chat.unmutedeveryone, {
                                         name: chat.un
