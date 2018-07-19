@@ -4395,7 +4395,7 @@
                         $.getJSON('/_/bans', function(json) {
                             var msg = chat.message;
                             if (msg.length === cmd.length) return;
-                            var name = msg.substring(cmd.length + 2);
+                            var name = msg.substring(cmd.length + 1);
                             var bannedUsers = json.data;
                             var found = false;
                             var bannedUser = null;
@@ -4448,7 +4448,7 @@
                         $.getJSON('/_/mutes', function(json) {
                             var msg = chat.message;
                             if (msg.length === cmd.length) return;
-                            var name = msg.substring(cmd.length + 2);
+                            var name = msg.substring(cmd.length + 1);
                             var arg = msg.substring(cmd.length + 1);
                             var mutedUsers = json.data;
                             var found = false;
