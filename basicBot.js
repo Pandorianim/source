@@ -4401,8 +4401,16 @@
                             if (!found) return API.sendChat(subChat(basicBot.chat.notbanned, {
                                 name: chat.un
                             }));
-                            API.moderateUnbanUser(bannedUser.id);
-                            console.log('Unbanned:', name);
+                            $.ajax({
+    type: 'DELETE',
+    url: `https://plug.dj/_/bans/${bannedUser.id}`,
+    error: e => {
+        API.chatLog(e);
+    },
+    success: () => {
+        API.chatLog(`Successfully unbanned ${name}.`);
+    }
+});
                         });
                     }
                 }
@@ -4460,8 +4468,16 @@
                                 if (!found) return API.sendChat(subChat(basicBot.chat.notbanned, {
                                     name: chat.un
                                 }));
-                                API.moderateUnmuteUser(mutedUser.id);
-                                console.log('Unmuted:', name);
+                                $.ajax({
+    type: 'DELETE',
+    url: `https://plug.dj/_/mutes/${mutedUser.id}`,
+    error: e => {
+        API.chatLog(e);
+    },
+    success: () => {
+        API.chatLog(`Successfully unmuted ${name}.`);
+    }
+});
                             }
                         });
                     }
