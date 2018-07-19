@@ -4448,7 +4448,7 @@
                         $.getJSON('/_/mutes', function(json) {
                             var msg = chat.message;
                             if (msg.length === cmd.length) return;
-                            var name = msg.substring(cmd.length + 1);
+                            var name = msg.substring(cmd.length + 2);
                             var arg = msg.substring(cmd.length + 1);
                             var mutedUsers = json.data;
                             var found = false;
