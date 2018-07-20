@@ -983,7 +983,28 @@
         eventDjadvance: function(obj) {
             if (!obj.dj) return;
             if (basicBot.settings.autowoot) {
-                $('#woot').click(); // autowoot
+                $.ajax({
+        type: 'GET',
+        url: 'https://plug.dj/_/rooms/state',
+        error: e => {
+            API.chatLog(`Can't get room data ${e}`);
+        },
+        success: roomData => {
+            $.ajax({
+                type: 'POST',
+                url: 'https://plug.dj/_/votes',
+                data: JSON.stringify({
+                    direction: 1,
+                    historyID: roomData.data[0].playback.historyID,
+                }),
+                dataType: 'json',
+                contentType: 'application/json',
+                error: err => {
+                    API.chatLog(`Can't vote ${err}`);
+                }
+            });
+        }
+    });
             }
 
             var user = basicBot.userUtilities.lookupUser(obj.dj.id)
@@ -2718,8 +2739,16 @@
                             if (time > 24 * 60 * 60) API.moderateBanUser(user.id, 1, API.BAN.PERMA);
                             else API.moderateBanUser(user.id, 1, API.BAN.DAY);
                             setTimeout(function(id, name) {
-                                API.moderateUnbanUser(id);
-                                console.log('Unbanned @' + name + '. (' + id + ')');
+                                $.ajax({
+    type: 'DELETE',
+    url: `https://plug.dj/_/bans/${id}`,
+    error: e => {
+        API.chatLog(e);
+    },
+    success: () => {
+        API.chatLog(`Unbanned ${name}. ID: ${id}`);
+    }
+});
                             }, time * 60 * 1000, user.id, name);
                         } else API.sendChat(subChat(basicBot.chat.invalidtime, {
                             name: chat.un
@@ -3883,8 +3912,16 @@
                             if (!found) return API.sendChat(subChat(basicBot.chat.notbanned, {
                                 name: chat.un
                             }));
-                            API.moderateUnbanUser(bannedUser.id);
-                            console.log('Unbanned:', name);
+                            $.ajax({
+    type: 'DELETE',
+    url: `https://plug.dj/_/bans/${bannedUser.id}`,
+    error: e => {
+        API.chatLog(e);
+    },
+    success: () => {
+        API.chatLog(`Successfully unbanned ${name}.`);
+    }
+});
                         });
                     }
                 }
