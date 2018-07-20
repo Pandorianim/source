@@ -294,14 +294,12 @@
             thorCooldown: 10,
             skipPosition: 2,
             skipReasons: [
-                ['theme', 'This song does not fit the room theme. '],
-                ['op', 'This song is on the OP list. '],
-                ['history', 'This song is in the history. '],
-                ['mix', 'You played a mix, which is against the rules. '],
-                ['sound', 'The song you played had bad sound quality or no sound. '],
-                ['nsfw', 'The song you contained was NSFW (image or sound). '],
-                ['bieber', 'The song you contained was NSFW (image or sound). '],
-                ['unavailable', 'The song you played was not available for some users. ']
+                ['theme', 'Ta piosenka nie pasuje do tematu pokoju. '],
+                ['op', 'Ta pioisenka jest naa liście OP. '],
+                ['history', 'Inna wersja tej piosenki znajduje się w historii. '],
+                ['sound', 'Ta piosneka ma kijową jakość dźwięku/obrazu. '],
+                ['nsfw', 'Ta piosenak zawiera sceny/muzykę NSFW! '],
+                ['unavailable', 'Ta piosenka nie była dostępna dla wszystkich użytkowników. ']
             ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
@@ -909,7 +907,7 @@
 
             if (botCreatorIDs.indexOf(user.id) > -1) {
               console.log(true);
-                API.sendChat('@'+user.username+' '+'Witaj Creator-sama, twa wola jest dla mnie rozkazem :bow:');
+                API.sendChat('@'+user.username+' '+'witaj ponownie!');
             } else if (basicBot.settings.welcome && greet) {
               console.log(false);
               console.log(botCreatorIDs);
