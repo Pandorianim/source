@@ -173,8 +173,6 @@
             }
         }
         var json_sett = null;
-        var roominfo = document.getElementById('room-settings');
-        info = roominfo.textContent;
         var ref_bot = '@basicBot=';
         var ind_ref = info.indexOf(ref_bot);
         if (ind_ref > 0) {
