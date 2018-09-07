@@ -8,7 +8,7 @@
 
     /*window.onerror = function() {
         var room = JSON.parse(localStorage.getItem('basicBotRoom'));
-        window.location = 'https://plug.dj' + room.name;
+        window.location = 'https://plug.dj' + room.name;f
     };*/
 
     API.getWaitListPosition = function(id) {
@@ -1241,7 +1241,7 @@
 
         chatcleanerADM: function(chat) {
             if (!basicBot.settings.filterChat) return false;
-            if (basicBot.userUtilities.getPermission(chat.uid) >= API.ROLE.ADMIN) return false;
+            if (basicBot.userUtilities.getPermission(chat.uid) >= API.ROLE.HOST) return false;
             var msg = chat.message;
             var words = msg.split(' ');
             var containsLetters = false;
@@ -1260,7 +1260,7 @@
                 ch = msg.charAt(i);
                 if (ch >= 'A' && ch <= 'Z') capitals++;
             }
-            if (capitals >= 20) {
+            if (capitals >=  50) {
                 API.sendChat(subChat(basicBot.chat.caps, {
                     name: chat.un
                 }));
@@ -1273,7 +1273,7 @@
                     API.sendChat(subChat(basicBot.chat.swearA, {
                         name: chat.un
                     }));
-                    return true;
+                    return false;
                 }
             }
             }
